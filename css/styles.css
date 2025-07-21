@@ -1,0 +1,162 @@
+*{
+    margin-top: 5px;
+    font-family: Arial;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: black;
+  }
+  
+  .link_hgb {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .hidden{
+    font-size: 1.5rem;
+    cursor: default;
+  }
+  /* Namen bekommen Farbe nur bei Hover */
+  #person_list .font_color_blue:hover {
+    color: rgb(93,72,255);
+  }
+  
+  #person_list .font_color_rose:hover {
+    color: rgb(243,180,225);
+  }
+  
+  
+  #person_list .font_color_red:hover {
+    color: rgb(255,0,0);
+  }
+  
+  #person_list .font_color_darkgreen:hover {
+    color: rgb(0,107,0);
+  }
+  
+  #person_list .font_color_signalpink:hover {
+    color: rgb(255,0,255);
+  }
+  
+  #person_list .font_color_orange:hover {
+    color: rgb(238,142,45);
+  }
+  
+  #person_list .font_color_brown:hover {
+    color: rgb(129,66,23);
+  }
+  
+  #person_list .font_color_signalgreen:hover {
+    color: rgb(127,255,0);
+  }
+  
+  /* Werke bekommen immer die jeweilige Farbe */
+  .content{
+    font-size: 2.5rem;
+    color: white;
+    /* hover effekt mit länger verzögerung */
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+    transition-dalay: 0s;
+    cursor: default;
+  }
+  
+  .content .font_color_blue:hover {
+    color: rgb(93,72,255);
+    transition-delay: 0s;
+  }
+  
+  .content .font_color_blue:not(:hover){
+    transition-delay: 5s;
+  }
+  
+  .content .font_color_rose:hover {
+    color: rgb(243,180,225);
+    transition-delay: 0s;
+  }
+  .content .font_color_rose:not(:hover){
+    transition-delay: 5s;
+  }
+  
+  .content .font_color_red:hover {
+    color: rgb(255,0,0);
+    transition-delay: 0s;
+  }
+  .content .font_color_red:not(:hover){
+    transition-delay: 5s;
+  }
+  
+  .content .font_color_darkgreen:hover {
+    color: rgb(0,107,0);
+    transition-delay: 0s;
+  }
+  .content .font_color_darkgreen:not(:hover){
+    transition-delay: 5s;
+  }
+  
+  .content .font_color_signalpink:hover {
+    color: rgb(255,0,255);
+    transition-delay: 0s;
+  }
+  .content .font_color_signalpink:not(:hover){
+    transition-delay: 5s;
+  }
+  
+  .content .font_color_orange:hover {
+    color: rgb(238,142,45);
+    transition-delay: 0s;
+  }
+  .content .font_color_orange:not(:hover){
+    transition-delay: 5s;
+  }
+  
+  .content .font_color_brown:hover {
+    color: rgb(129,66,23);
+    transition-delay: 0s;
+  }
+  .content .font_color_brown:not(:hover){
+    transition-delay: 5s;
+  }
+  
+  .content .font_color_signalgreen:hover {
+    color:  rgb(127,255,0);
+    transition-delay: 0s;
+  }
+  .content .font_color_signalgreen:not(:hover){
+    transition-delay: 5s;
+  }
+  
+  .content .klasse:hover{
+    color: black; 
+    transition-delay: 0s;
+  }
+  .content .klasse:not(:hover){
+    transition-delay: 5s;
+  }
+  
+  #person_list {
+      line-height: 35%;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+      max-height: 0;
+      padding: 0 05px;
+          }
+          
+          #person_list.show {
+              max-height: 1000px;
+              padding: 5px;
+          }
+          
+  #toggle-button {
+         font-size: 1.5rem;
+         font-style: normal;
+         cursor: pointer;
+         user-select: none;
+   }
+          
+  #toggle-button:hover {
+          color: #666;
+          }
+  
