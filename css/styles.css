@@ -4,12 +4,19 @@
     /*Schriften ausprobieren: monument grotestk */
   }
   
-  h1 {
-    font-size: 1.5rem;
-    font-weight: normal;
-    color: black;
-  }
-  
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: black;
+} 
+
+.left-side {
+  display: flex;
+  gap: 10px;
+}
   .link_hgb {
     text-decoration: none;
     color: black;
