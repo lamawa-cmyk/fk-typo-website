@@ -144,6 +144,7 @@
   }
   
   #person_list {
+      position: absolute; /* damit die person_list über den content schwebt */
       line-height: 35%;
       overflow: hidden;
       transition: max-height 0.3s ease-out, padding 0.3s ease-out;
