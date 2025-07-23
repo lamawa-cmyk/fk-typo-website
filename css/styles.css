@@ -35,7 +35,6 @@
     color: rgb(243,180,225);
   }
   
-  
   #person_list .font_color_red:hover {
     color: rgb(255,0,0);
   }
@@ -167,4 +166,31 @@
   #toggle-button:hover {
           color: #666;
           }
+
+/* info-button */
+        
+#info-button {
+       font-size: 1.5rem;
+       font-style: normal;
+       cursor: pointer;
+       user-select: none;
+  padding-right: 5px;
+  
+ }
+
+#info-button:hover {
+    color: #666;
+}
+
+#info_text {
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    max-height: 0;
+    padding: 0 05px;
+        }
+        
+        #info_text.show {
+            max-height: 1000px;
+            padding: 5px;
+        }
   
