@@ -3,5 +3,7 @@ document.getElementById("toggle-button").addEventListener("click", function () {
                 person_list.classList.toggle("show");
             });
 
-
-/* test um github zu testen*/
+document.getElementById("info-button").addEventListener("click", function () {
+const info_text = document.getElementById("info_text");
+            info_text.classList.toggle("show");
+        });
