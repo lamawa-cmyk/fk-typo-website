@@ -13,6 +13,9 @@
   color: black;
 } 
 
+a:hover{
+  cursor:default;
+}
 .left-side {
   display: flex;
   gap: 10px;
