@@ -76,6 +76,11 @@
     cursor: default;
   }
 
+  .content .highlighted {
+    color:inherit;
+    transition-delay: 0s !important;
+  }
+
   .content a{
     color: inherit; /* Farbe vom Elternelement wird übernommen */
     text-decoration: none;
@@ -89,6 +94,10 @@
   .content .font_color_blue:not(:hover){
     transition-delay: 5s;
   }
+
+  .content .font_color_blue.highlighted{
+    color: rgb(93,72,255) !important;
+  }
   
   .content .font_color_rose:hover, .content .font_color_rose:hover a {
     color: rgb(243,180,225);
@@ -97,7 +106,10 @@
   .content .font_color_rose:not(:hover){
     transition-delay: 5s;
   }
-  
+  .content .font_color_rose.highlighted{
+    color: rgb(243,180,225);
+  }
+
   .content .font_color_red:hover {
     color: rgb(255,0,0);
     transition-delay: 0s;
@@ -106,12 +118,20 @@
     transition-delay: 5s;
   }
   
+  .content .font_color_red.highlighted{
+    color: rgb(255,0,0);
+  }
+
   .content .font_color_darkgreen:hover {
     color: rgb(0,107,0);
     transition-delay: 0s;
   }
   .content .font_color_darkgreen:not(:hover){
     transition-delay: 5s;
+  }
+
+  .content .font_color_darkgreen.highlighted{
+    color: rgb(0,107,0);
   }
   
   .content .font_color_signalpink:hover {
@@ -122,12 +142,19 @@
     transition-delay: 5s;
   }
   
+  .content .font_color_signalpink.highlighted{
+    color: rgb(255,0,255);
+  }
   .content .font_color_orange:hover {
     color: rgb(238,142,45);
     transition-delay: 0s;
   }
   .content .font_color_orange:not(:hover){
     transition-delay: 5s;
+  }
+
+  .content .font_color_orange.highlighted{
+    color: rgb(238,142,45);
   }
   
   .content .font_color_brown:hover, .content .font_color_brown:hover a {
@@ -138,6 +165,10 @@
     transition-delay: 5s;
   }
   
+  .content .font_color_brown.highlighted {
+    color: rgb(129,66,23);
+  } 
+  
   .content .font_color_signalgreen:hover, .content .font_color_signalgreen:hover a {
     color:  rgb(127,255,0);
     transition-delay: 0s;
@@ -146,12 +177,20 @@
     transition-delay: 5s;
   }
 
+  .content .font_color_signalgreen.highlighted{
+    color:  rgb(127,255,0);
+  }
+
   .content .font_color_babyblue:hover {
     color:  rgb(139,182,215);
     transition-delay: 0s;
   }
   .content .font_color_babyblue:not(:hover){
     transition-delay: 5s;
+  }
+
+  .content .font_color_babyblue.highlighted{
+    color:  rgb(139,182,215);
   }
 
 
