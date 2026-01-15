@@ -58,6 +58,11 @@
   #person_list .font_color_signalgreen:hover {
     color: rgb(127,255,0);
   }
+
+    #person_list .font_color_babyblue:hover {
+    color: rgb(139,182,215);
+  }
+
   
   /* Werke bekommen immer die jeweilige Farbe */
   .content{
@@ -134,6 +139,17 @@
   .content .font_color_signalgreen:not(:hover){
     transition-delay: 5s;
   }
+
+  .content .font_color_babyblue:hover {
+    color:  rgb(139,182,215);
+    transition-delay: 0s;
+  }
+  .content .font_color_babyblue:not(:hover){
+    transition-delay: 5s;
+  }
+
+
+
   
   .content .klasse:hover{
     color: black; 
@@ -143,6 +159,14 @@
     transition-delay: 5s;
   }
   
+  .content .collab:hover{
+    color: rgb(0,21,151); 
+    transition-delay: 0s;
+  }
+  .content .collab:not(:hover){
+    transition-delay: 5s;
+  }
+
   #person_list {
       position: absolute; /* damit die person_list über den content schwebt */
       line-height: 35%;
