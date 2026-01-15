@@ -13,9 +13,7 @@
   color: black;
 } 
 
-a:hover{
-  cursor:default;
-}
+
 .left-side {
   display: flex;
   gap: 10px;
@@ -77,8 +75,13 @@ a:hover{
     transition-delay: 0s;
     cursor: default;
   }
+
+  .content a{
+    color: inherit; /* Farbe vom Elternelement wird übernommen */
+    text-decoration: none;
+  }
   
-  .content .font_color_blue:hover {
+  .content .font_color_blue:hover, .content .font_color_blue:hover a {
     color: rgb(93,72,255);
     transition-delay: 0s;
   }
@@ -87,7 +90,7 @@ a:hover{
     transition-delay: 5s;
   }
   
-  .content .font_color_rose:hover {
+  .content .font_color_rose:hover, .content .font_color_rose:hover a {
     color: rgb(243,180,225);
     transition-delay: 0s;
   }
@@ -127,7 +130,7 @@ a:hover{
     transition-delay: 5s;
   }
   
-  .content .font_color_brown:hover {
+  .content .font_color_brown:hover, .content .font_color_brown:hover a {
     color: rgb(129,66,23);
     transition-delay: 0s;
   }
@@ -135,7 +138,7 @@ a:hover{
     transition-delay: 5s;
   }
   
-  .content .font_color_signalgreen:hover {
+  .content .font_color_signalgreen:hover, .content .font_color_signalgreen:hover a {
     color:  rgb(127,255,0);
     transition-delay: 0s;
   }
@@ -154,7 +157,7 @@ a:hover{
 
 
   
-  .content .klasse:hover{
+  .content .klasse:hover, .content .klasse:hover a{
     color: black; 
     transition-delay: 0s;
   }
@@ -162,7 +165,8 @@ a:hover{
     transition-delay: 5s;
   }
   
-  .content .collab:hover{
+  /* das zweite braucht man für den Link <a> damit es auch am Anfang verschwindet */
+  .content .collab:hover, .content .collab:hover a {
     color: rgb(0,21,151); 
     transition-delay: 0s;
   }
