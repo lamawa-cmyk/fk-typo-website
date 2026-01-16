@@ -231,41 +231,42 @@
 }
 
 
-  #person_list {
-      position: absolute; /* damit die person_list über den content schwebt */
-      line-height: 35%;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-      max-height: 0;
-      padding: 0 05px;
-          }
-          
-          #person_list.show {
-              max-height: 1000px;
-              padding: 5px;
-          }
-          
-  #toggle-button {
-         font-size: 1.5rem;
-         font-style: normal;
-         cursor: pointer;
-         user-select: none;
-   }
-          
-  #toggle-button:hover {
-          color: #666;
-          }
+#person_list {
+    position: absolute; /* damit die person_list über den content schwebt */
+    line-height: 35%; 
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    max-height: 0;
+    padding: 0 5px;
+}
+
+#person_list.show {
+    max-height: 1000px;
+    padding: 5px;
+    max-width: calc(20% - 10px); /* damit sich person_list nicht mit info_text überschneidet */
+    left: 0;
+}
+
+
+#toggle-button {
+    font-size: 1.5rem;
+    font-style: normal;
+    cursor: pointer;
+    user-select: none;
+}
+
+#toggle-button:hover {
+    color: #666;
+}
 
 /* info-button */
-        
 #info-button {
-       font-size: 1.5rem;
-       font-style: normal;
-       cursor: pointer;
-       user-select: none;
-  padding-right: 5px;
-  
- }
+    font-size: 1.5rem;
+    font-style: normal;
+    cursor: pointer;
+    user-select: none;
+    padding-right: 5px;
+}
 
 #info-button:hover {
     color: #666;
@@ -275,14 +276,16 @@
     overflow: hidden;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
     max-height: 0;
-    padding: 0 05px;
-        }
-        
-        #info_text.show {
-            max-height: 1000px;
-            padding: 5px;
-        }
-  
+    padding: 0 5px;
+}
+
+#info_text.show {
+    max-height: 1000px;
+    padding: 5px;
+    max-width: calc(80% - 10px);  /* damit sich der Text nicht mit der Namenliste überschneidet */
+    margin-left: auto;
+}
+
 
 /* Bilddarstellung*/
 
