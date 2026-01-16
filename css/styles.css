@@ -76,10 +76,12 @@
     cursor: default;
   }
 
+  /* highlight Namen und Projekte */
   .content .highlighted {
     color:inherit;
     transition-delay: 0s !important;
   }
+
 
   .content a{
     color: inherit; /* Farbe vom Elternelement wird übernommen */
@@ -192,8 +194,6 @@
   .content .font_color_babyblue.highlighted{
     color:  rgb(139,182,215);
   }
-
-
 
   
   .content .klasse:hover, .content .klasse:hover a{
