@@ -10,6 +10,7 @@ const info_text = document.getElementById("info_text");
 
 // Projekte von Leuten sollen erscheinen
 
+// Namen in person_list
 const personNames = document.querySelectorAll('#person_list p');
 
 personNames.forEach(name => {
