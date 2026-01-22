@@ -57,7 +57,7 @@
   }
   
   #person_list .font_color_signalgreen:hover {
-    color: rgb(127,255,0);
+    color: rgb(0,229,0);
   }
 
     #person_list .font_color_babyblue:hover {
@@ -172,7 +172,7 @@
   } 
   
   .content .font_color_signalgreen:hover, .content .font_color_signalgreen:hover a {
-    color:  rgb(127,255,0);
+    color:  rgb(0,229,0);
     transition-delay: 0s;
   }
   .content .font_color_signalgreen:not(:hover){
@@ -180,7 +180,7 @@
   }
 
   .content .font_color_signalgreen.highlighted{
-    color:  rgb(127,255,0);
+    color:  rgb(0,229,0);
   }
 
   .content .font_color_babyblue:hover {
