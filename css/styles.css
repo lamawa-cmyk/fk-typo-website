@@ -163,32 +163,32 @@
     text-decoration: none;
   }
   
-  .content .font_color_blue:hover, .content .font_color_blue:hover a {
-    color: rgb(93,72,255);
+  .content .font_color_royalblue:hover, .content .font_color_blue:hover a {
+    color: rgb(0,2,249);
     transition-delay: 0s;
   }
   
-  .content .font_color_blue:not(:hover){
+  .content .font_color_royalblue:not(:hover){
     transition-delay: 5s;
   }
 
-  .content .font_color_blue.highlighted{
-    color: rgb(93,72,255) !important;
+  .content .font_color_royalblue.highlighted{
+    color: rgb(0,2,249) !important;
   }
   
   .content .font_color_rose:hover, .content .font_color_rose:hover a {
-    color: rgb(243,180,225);
+    color: rgb(255,166,252);
     transition-delay: 0s;
   }
   .content .font_color_rose:not(:hover){
     transition-delay: 5s;
   }
   .content .font_color_rose.highlighted{
-    color: rgb(243,180,225);
+    color: rgb(255,166,252);
   }
 
   .content .font_color_red:hover {
-    color: rgb(255,0,0);
+    color: rgb(255,8,28);
     transition-delay: 0s;
   }
   .content .font_color_red:not(:hover){
@@ -196,11 +196,11 @@
   }
   
   .content .font_color_red.highlighted{
-    color: rgb(255,0,0);
+    color: rgb(255,8,28);
   }
 
   .content .font_color_darkgreen:hover {
-    color: rgb(0,107,0);
+    color: rgb(0,107,18);
     transition-delay: 0s;
   }
   .content .font_color_darkgreen:not(:hover){
@@ -208,11 +208,11 @@
   }
 
   .content .font_color_darkgreen.highlighted{
-    color: rgb(0,107,0);
+    color: rgb(0,107,18);
   }
   
   .content .font_color_signalpink:hover {
-    color: rgb(255,0,255);
+    color: rgb(255,11,250);
     transition-delay: 0s;
   }
   .content .font_color_signalpink:not(:hover){
@@ -220,7 +220,7 @@
   }
   
   .content .font_color_signalpink.highlighted{
-    color: rgb(255,0,255);
+    color: rgb(255,11,250);
   }
   .content .font_color_orange:hover {
     color: rgb(238,142,45);
