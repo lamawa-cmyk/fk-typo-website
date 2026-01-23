@@ -27,44 +27,12 @@
     font-size: 1.5rem;
     cursor: default;
   }
-  /* Namen bekommen Farbe nur bei Hover */
-  #person_list .font_color_blue:hover {
-    color: rgb(93,72,255);
-  }
-  
-  #person_list .font_color_rose:hover {
-    color: rgb(243,180,225);
-  }
-  
-  #person_list .font_color_red:hover {
-    color: rgb(255,0,0);
-  }
-  
-  #person_list .font_color_darkgreen:hover {
-    color: rgb(0,107,0);
-  }
-  
-  #person_list .font_color_signalpink:hover {
-    color: rgb(255,0,255);
-  }
-  
-  #person_list .font_color_orange:hover {
-    color: rgb(238,142,45);
-  }
-  
-  #person_list .font_color_brown:hover {
-    color: rgb(129,66,23);
-  }
-  
-  #person_list .font_color_signalgreen:hover {
-    color: rgb(0,229,0);
+
+
+  #person_list p:hover {
+    color: #aaa;
   }
 
-    #person_list .font_color_babyblue:hover {
-    color: rgb(139,182,215);
-  }
-
-  
   /* Werke bekommen immer die jeweilige Farbe */
   .content{
     font-size: 2.5rem;
