@@ -28,7 +28,7 @@
     cursor: default;
   }
 
-  
+
   /*Personenliste mit Farbigen Boxen beim Darüberhovern*/
 
     #person_list p {
@@ -59,36 +59,80 @@
 }
 
 /* Box-Farben */
-  #person_list .font_color_babyblue:hover::before {
-    background-color: rgb(139,182,215);
-  }
-  
-  #person_list .font_color_blue:hover::before {
-    background-color: rgb(93,72,255);
-  }
-  
-  #person_list .font_color_rose:hover::before {
-    background-color: rgb(243,180,225);
-  }
-  
   #person_list .font_color_red:hover::before {
-    background-color: rgb(255,0,0);
+    background-color: rgb(255,8,28);
   }
-  
-  #person_list .font_color_darkgreen:hover::before {
-    background-color: rgb(0,107,0);
+
+  #person_list .font_color_peach:hover::before {
+    background-color: rgb(255,140,135);
+  }
+
+  #person_list .font_color_babyblue:hover::before {
+    background-color: rgb(132,182,213);
   }
   
   #person_list .font_color_signalpink:hover::before {
-    background-color: rgb(255,0,255);
+    background-color: rgb(255,11,250);
+  }
+
+  #person_list .font_color_lilac:hover::before {
+    background-color: rgb(174,136,225);
+  }
+
+  #person_list .font_color_darkgreen:hover::before {
+    background-color: rgb(0,107,18);
+  }
+
+  #person_list .font_color_royalblue:hover::before {
+    background-color: rgb(0,2,249);
   }
   
-  #person_list .font_color_orange:hover::before {
-    background-color: rgb(238,142,45);
+  #person_list .font_color_purple:hover::before {
+    background-color: rgb(147,65,194);
+  }
+
+  #person_list .font_color_navygreen:hover::before {
+    background-color: rgb(143,177,132);
+  }
+
+  #person_list .font_color_darkblue:hover::before {
+    background-color: rgb(0,0,147);
+  }
+
+  #person_list .font_color_cyan:hover::before {
+    background-color: rgb(0,150,215);
+  }
+
+  #person_list .font_color_ochre:hover::before {
+    background-color: rgb(180,136,58);
+  }
+
+  #person_list .font_color_burgundy:hover::before {
+    background-color: rgb(157,23,21);
+  }
+
+  #person_list .font_color_rose:hover::before {
+    background-color: rgb(255,166,252);
   }
   
+  #person_list .font_color_darkpurple:hover::before {
+    background-color: rgb(122,23,122);
+  }
+
+  #person_list .font_color_olive:hover::before {
+    background-color: rgb(187,183,125);
+  }
+
   #person_list .font_color_brown:hover::before {
-    background-color: rgb(129,66,23);
+    background-color: rgb(121,69,33);
+  }
+
+  #person_list .font_color_turquoise:hover::before {
+    background-color: rgb(122,201,205);
+  }
+
+  #person_list .font_color_orange:hover::before {
+    background-color: rgb(232,147,70);
   }
   
   #person_list .font_color_signalgreen:hover::before {
