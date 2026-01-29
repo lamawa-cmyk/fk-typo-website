@@ -1,0 +1,167 @@
+  /* alte Struktur 28.01.25
+  HIER WAR DER .CONTENT WEISS UND HAT ERST BEIM DRÜBER FAHREN EINE FARBE BEKOMMEN */
+  /* Werke bekommen immer die jeweilige Farbe */
+  .content{
+    font-size: 2.5rem;
+    color: white;
+    /* hover effekt mit länger verzögerung */
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+    transition-delay: 0s;
+    cursor: default;
+  }
+
+  /* highlight Namen und Projekte */
+  .content .highlighted {
+    color:inherit;
+    transition-delay: 0s !important;
+  }
+
+
+  .content a{
+    color: inherit; /* Farbe vom Elternelement wird übernommen */
+    text-decoration: none;
+  }
+  
+  .content .font_color_royalblue:hover, .content .font_color_blue:hover a {
+    color: rgb(0,2,249);
+    transition-delay: 0s;
+  }
+  
+  .content .font_color_royalblue:not(:hover){
+    transition-delay: 5s;
+  }
+
+  .content .font_color_royalblue.highlighted{
+    color: rgb(0,2,249) !important;
+  }
+  
+  .content .font_color_rose:hover, .content .font_color_rose:hover a {
+    color: rgb(255,166,252);
+    transition-delay: 0s;
+  }
+  .content .font_color_rose:not(:hover){
+    transition-delay: 5s;
+  }
+  .content .font_color_rose.highlighted{
+    color: rgb(255,166,252);
+  }
+
+  .content .font_color_red:hover {
+    color: rgb(255,8,28);
+    transition-delay: 0s;
+  }
+  .content .font_color_red:not(:hover){
+    transition-delay: 5s;
+  }
+  
+  .content .font_color_red.highlighted{
+    color: rgb(255,8,28);
+  }
+
+  .content .font_color_darkgreen:hover {
+    color: rgb(0,107,18);
+    transition-delay: 0s;
+  }
+  .content .font_color_darkgreen:not(:hover){
+    transition-delay: 5s;
+  }
+
+  .content .font_color_darkgreen.highlighted{
+    color: rgb(0,107,18);
+  }
+  
+  .content .font_color_signalpink:hover {
+    color: rgb(255,11,250);
+    transition-delay: 0s;
+  }
+  .content .font_color_signalpink:not(:hover){
+    transition-delay: 5s;
+  }
+  
+  .content .font_color_signalpink.highlighted{
+    color: rgb(255,11,250);
+  }
+  .content .font_color_orange:hover {
+    color: rgb(238,142,45);
+    transition-delay: 0s;
+  }
+  .content .font_color_orange:not(:hover){
+    transition-delay: 5s;
+  }
+
+  .content .font_color_orange.highlighted{
+    color: rgb(238,142,45);
+  }
+  
+  .content .font_color_brown:hover, .content .font_color_brown:hover a {
+    color: rgb(129,66,23);
+    transition-delay: 0s;
+  }
+  .content .font_color_brown:not(:hover){
+    transition-delay: 5s;
+  }
+  
+  .content .font_color_brown.highlighted {
+    color: rgb(129,66,23);
+  } 
+  
+  .content .font_color_signalgreen:hover, .content .font_color_signalgreen:hover a {
+    color:  rgb(0,229,0);
+    transition-delay: 0s;
+  }
+  .content .font_color_signalgreen:not(:hover){
+    transition-delay: 5s;
+  }
+
+  .content .font_color_signalgreen.highlighted{
+    color:  rgb(0,229,0);
+  }
+
+  .content .font_color_babyblue:hover {
+    color:  rgb(139,182,215);
+    transition-delay: 0s;
+  }
+  .content .font_color_babyblue:not(:hover){
+    transition-delay: 5s;
+  }
+
+  .content .font_color_babyblue.highlighted{
+    color:  rgb(139,182,215);
+  }
+
+  
+  .content .klasse:hover, .content .klasse:hover a{
+    color: black; 
+    transition-delay: 0s;
+  }
+  .content .klasse:not(:hover){
+    transition-delay: 5s;
+  }
+  
+  /* das zweite braucht man für den Link <a> damit es auch am Anfang verschwindet */
+  .content .collab:hover, .content .collab:hover a {
+    color: rgb(0,21,151); 
+    transition-delay: 0s;
+  }
+  .content .collab:not(:hover){
+    transition-delay: 5s;
+  }
+
+  /* emojis werden anders gelöst */
+.content .emoji {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    transition-delay: 0s;
+}
+
+.content .emoji:hover {
+    opacity: 1 !important;  /* !important zum Testen */
+    transition-delay: 0s;
+}
+
+.content .emoji:not(:hover) {
+    opacity: 0;  
+    transition-delay: 5s;
+}
+
