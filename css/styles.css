@@ -48,6 +48,8 @@
     #person_list p {
     position: relative;
     z-index: 10; /* neue Ebene */
+    margin-left: 0;
+    padding-left: 0;
     display: block;      /* WICHTIG */
     width: fit-content;  /* Box nur so breit wie der Text */
     cursor: default;
@@ -57,7 +59,7 @@
   #person_list p::before {
     content: "";
     position: absolute;
-    left: -2px;
+    left: calc(-1 * var(--page-padding)); /* 👈 Box geht über Rand */
     right: -2px;
     top: 30%;
     height: 1.2em;
@@ -97,10 +99,14 @@
     background-color: rgb(0,107,18);
   }
 
+  #person_list .font_color_yellow:hover::before {
+    background-color: rgb(251,215,6);
+  }
+  
   #person_list .font_color_royalblue:hover::before {
     background-color: rgb(0,2,249);
   }
-  
+
   #person_list .font_color_purple:hover::before {
     background-color: rgb(147,65,194);
   }
@@ -322,18 +328,19 @@
 
 #person_list {
     position: absolute; /* damit die person_list über den content schwebt */
+    left: var(--page-padding);
+    margin-left: 1.4px; /* Liste etwas nach rechts geschoben, dass aligned mit dem Content darunter */   
     line-height: 35%; 
     overflow: hidden;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
     max-height: 0;
-    padding: 0 5px;
+    padding: 0;
+    transition: max-height 0.3s ease-out; /* ← NUR Höhe */
 }
 
 #person_list.show {
-    max-height: 1000px;
-    padding: 5px;
-    max-width: calc(20% - 10px); /* damit sich person_list nicht mit info_text überschneidet */
-    left: var(--page-padding);
+  max-height: 1000px;
+  max-width: 20%;
 }
 
 
