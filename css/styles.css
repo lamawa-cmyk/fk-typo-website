@@ -84,6 +84,10 @@
   #person_list .font_color_red:hover::before {
     background-color: rgb(255,8,28);
   }
+  /* hier: wenn man ueber namesnliste geht, werden alle Projekte in der richtigen Farbe angezeigt*/
+  .content .font_color_red.highlighted{
+    color: rgb(255,8,28);
+  }
 
   #person_list .font_color_peach:hover::before {
     background-color: rgb(255,140,135);
@@ -92,9 +96,15 @@
   #person_list .font_color_babyblue:hover::before {
     background-color: rgb(132,182,213);
   }
-  
+    .content .font_color_babyblue.highlighted{
+    color:  rgb(139,182,215);
+  }
+
   #person_list .font_color_signalpink:hover::before {
     background-color: rgb(255,11,250);
+  }
+    .content .font_color_signalpink.highlighted{
+    color: rgb(255,11,250);
   }
 
   #person_list .font_color_lilac:hover::before {
@@ -104,7 +114,9 @@
   #person_list .font_color_darkgreen:hover::before {
     background-color: rgb(0,107,18);
   }
-
+  .content .font_color_darkgreen.highlighted{
+    color: rgb(0,107,18);
+  }
   #person_list .font_color_yellow:hover::before {
     background-color: rgb(251,215,6);
   }
@@ -112,7 +124,10 @@
   #person_list .font_color_royalblue:hover::before {
     background-color: rgb(0,2,249);
   }
-
+  .content .font_color_royalblue.highlighted{
+    color: rgb(0,2,249) !important;
+  }
+  
   #person_list .font_color_purple:hover::before {
     background-color: rgb(147,65,194);
   }
@@ -140,7 +155,10 @@
   #person_list .font_color_rose:hover::before {
     background-color: rgb(255,166,252);
   }
-  
+    .content .font_color_rose.highlighted{
+    color: rgb(255,166,252);
+  }
+
   #person_list .font_color_darkpurple:hover::before {
     background-color: rgb(122,23,122);
   }
@@ -153,6 +171,10 @@
     background-color: rgb(121,69,33);
   }
 
+    .content .font_color_brown.highlighted {
+    color: rgb(129,66,23);
+  } 
+
   #person_list .font_color_turquoise:hover::before {
     background-color: rgb(122,201,205);
   }
@@ -160,9 +182,16 @@
   #person_list .font_color_orange:hover::before {
     background-color: rgb(232,147,70);
   }
+    .content .font_color_orange.highlighted{
+    color: rgb(238,142,45);
+  }
   
   #person_list .font_color_signalgreen:hover::before {
     background-color: rgb(0,229,0);
+  }
+
+    .content .font_color_signalgreen.highlighted{
+    color:  rgb(0,229,0);
   }
   
   /* ================================
