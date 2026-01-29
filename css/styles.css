@@ -1,8 +1,14 @@
+@font-face {
+  font-family: "ABC Monument Grotesk";
+  src: url("../fonts/ABCMonumentGrotesk-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 /*:root ist das oberste Element der Seite*/
 :root {
   --page-padding: 16px;
-  --font-base: Arial, Helvetica, sans-serif;
+  --font-base: "ABC Monument Grotesk", Arial, Helvetica, sans-serif;
 }
 
 *{
