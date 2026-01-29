@@ -185,19 +185,23 @@
     color: rgb(255,166,252);
   }
 
-  .content .font_color_red {
+  .content .font_color_red,
+  .content .font_color_red a{
     color: rgb(255,8,28);
   }
 
-  .content .font_color_darkgreen {
+  .content .font_color_darkgreen,
+  .content .font_color_darkgreen a {
     color: rgb(0,107,18);
   }
 
-  .content .font_color_signalpink {
+  .content .font_color_signalpink,
+  .content .font_color_signalpink a {
     color: rgb(255,11,250);
   }
 
-  .content .font_color_orange {
+  .content .font_color_orange,
+  .content .font_color_orange a {
     color: rgb(238,142,45);
   }
 
@@ -211,7 +215,8 @@
     color: rgb(0,229,0);
   }
 
-  .content .font_color_babyblue {
+  .content .font_color_babyblue,
+  .content .font_color_babyblue a {
     color: rgb(139,182,215);
   }
 
@@ -257,10 +262,11 @@
     .content .font_color_signalgreen,
     .content .font_color_babyblue,
     .content .klasse,
-    .content .collab {
+    .content .collab, 
+    .content .emoji{
       opacity: 0;
-      transition: opacity 0.8s ease-in-out;
-      transition-delay: 5s; /* Verzögerung beim Ausblenden */
+      transition: opacity 0s ease-in-out;
+      transition-delay: 4s ; /* Verzögerung beim Ausblenden */
     }
 
     /* Hover macht sie sichtbar */
@@ -274,7 +280,9 @@
     .content .font_color_signalgreen:hover,
     .content .font_color_babyblue:hover,
     .content .klasse:hover,
-    .content .collab:hover {
+    .content .collab:hover,
+    .content .emoji:hover 
+     {
       opacity: 1;
       transition-delay: 0s; /* Sofort sichtbar beim Hover */
     }
@@ -285,17 +293,6 @@
       transition-delay: 0s !important;
     }
 
-    /* Emojis auf Desktop: unsichtbar bis Hover */
-    .content .emoji {
-      opacity: 0;
-      transition: opacity 0.8s ease-in-out;
-      transition-delay: 5s;
-    }
-
-    .content .emoji:hover {
-      opacity: 1;
-      transition-delay: 0s;
-    }
   }
 
 
