@@ -265,7 +265,7 @@
     .content .collab, 
     .content .emoji{
       opacity: 0;
-      transition: opacity 0s ease-in-out;
+      transition: opacity 0.075s ease-out;
       transition-delay: 4s ; /* Verzögerung beim Ausblenden */
     }
 
