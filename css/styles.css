@@ -159,173 +159,163 @@
     background-color: rgb(0,229,0);
   }
   
+  /* ================================
+      Neue Struktur: Farben sind Basis 
+    ===================================== */
 
-  /* Werke bekommen immer die jeweilige Farbe */
+  /* Basis-Styles für Content - gilt für ALLE Geräte */
   .content{
-    font-size: 2.5rem;
-    color: white;
-    /* hover effekt mit länger verzögerung */
-    opacity: 1;
-    transition: opacity 0.8s ease-in-out;
-    transition-delay: 0s;
+    font-size: 1.2rem; /* Mobile-First: kleinere Schrift als Standard */
     cursor: default;
   }
-
-  /* highlight Namen und Projekte */
-  .content .highlighted {
-    color:inherit;
-    transition-delay: 0s !important;
-  }
-
 
   .content a{
     color: inherit; /* Farbe vom Elternelement wird übernommen */
     text-decoration: none;
   }
-  
-  .content .font_color_royalblue:hover, .content .font_color_blue:hover a {
+
+  /* FARBEN sind IMMER definiert (Mobile + Desktop) */
+  .content .font_color_royalblue, 
+  .content .font_color_royalblue a {
     color: rgb(0,2,249);
-    transition-delay: 0s;
-  }
-  
-  .content .font_color_royalblue:not(:hover){
-    transition-delay: 5s;
   }
 
-  .content .font_color_royalblue.highlighted{
-    color: rgb(0,2,249) !important;
-  }
-  
-  .content .font_color_rose:hover, .content .font_color_rose:hover a {
-    color: rgb(255,166,252);
-    transition-delay: 0s;
-  }
-  .content .font_color_rose:not(:hover){
-    transition-delay: 5s;
-  }
-  .content .font_color_rose.highlighted{
+  .content .font_color_rose, 
+  .content .font_color_rose a {
     color: rgb(255,166,252);
   }
 
-  .content .font_color_red:hover {
-    color: rgb(255,8,28);
-    transition-delay: 0s;
-  }
-  .content .font_color_red:not(:hover){
-    transition-delay: 5s;
-  }
-  
-  .content .font_color_red.highlighted{
+  .content .font_color_red {
     color: rgb(255,8,28);
   }
 
-  .content .font_color_darkgreen:hover {
-    color: rgb(0,107,18);
-    transition-delay: 0s;
-  }
-  .content .font_color_darkgreen:not(:hover){
-    transition-delay: 5s;
-  }
-
-  .content .font_color_darkgreen.highlighted{
+  .content .font_color_darkgreen {
     color: rgb(0,107,18);
   }
-  
-  .content .font_color_signalpink:hover {
-    color: rgb(255,11,250);
-    transition-delay: 0s;
-  }
-  .content .font_color_signalpink:not(:hover){
-    transition-delay: 5s;
-  }
-  
-  .content .font_color_signalpink.highlighted{
+
+  .content .font_color_signalpink {
     color: rgb(255,11,250);
   }
-  .content .font_color_orange:hover {
-    color: rgb(238,142,45);
-    transition-delay: 0s;
-  }
-  .content .font_color_orange:not(:hover){
-    transition-delay: 5s;
-  }
 
-  .content .font_color_orange.highlighted{
+  .content .font_color_orange {
     color: rgb(238,142,45);
   }
-  
-  .content .font_color_brown:hover, .content .font_color_brown:hover a {
+
+  .content .font_color_brown, 
+  .content .font_color_brown a {
     color: rgb(129,66,23);
-    transition-delay: 0s;
-  }
-  .content .font_color_brown:not(:hover){
-    transition-delay: 5s;
-  }
-  
-  .content .font_color_brown.highlighted {
-    color: rgb(129,66,23);
-  } 
-  
-  .content .font_color_signalgreen:hover, .content .font_color_signalgreen:hover a {
-    color:  rgb(0,229,0);
-    transition-delay: 0s;
-  }
-  .content .font_color_signalgreen:not(:hover){
-    transition-delay: 5s;
   }
 
-  .content .font_color_signalgreen.highlighted{
-    color:  rgb(0,229,0);
+  .content .font_color_signalgreen, 
+  .content .font_color_signalgreen a {
+    color: rgb(0,229,0);
   }
 
-  .content .font_color_babyblue:hover {
-    color:  rgb(139,182,215);
-    transition-delay: 0s;
-  }
-  .content .font_color_babyblue:not(:hover){
-    transition-delay: 5s;
+  .content .font_color_babyblue {
+    color: rgb(139,182,215);
   }
 
-  .content .font_color_babyblue.highlighted{
-    color:  rgb(139,182,215);
+  .content .klasse, 
+  .content .klasse a {
+    color: black;
   }
 
-  
-  .content .klasse:hover, .content .klasse:hover a{
-    color: black; 
-    transition-delay: 0s;
-  }
-  .content .klasse:not(:hover){
-    transition-delay: 5s;
-  }
-  
-  /* das zweite braucht man für den Link <a> damit es auch am Anfang verschwindet */
-  .content .collab:hover, .content .collab:hover a {
-    color: rgb(0,21,151); 
-    transition-delay: 0s;
-  }
-  .content .collab:not(:hover){
-    transition-delay: 5s;
+  .content .collab, 
+  .content .collab a {
+    color: rgb(0,21,151);
   }
 
-  /* emojis werden anders gelöst */
-.content .emoji {
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-    transition-delay: 0s;
-}
+  /* Highlighted-Klasse für sofort sichtbare Elemente */
+  .content .highlighted {
+    color: inherit;
+  }
 
-.content .emoji:hover {
-    opacity: 1 !important;  /* !important zum Testen */
-    transition-delay: 0s;
-}
-
-.content .emoji:not(:hover) {
-    opacity: 0;  
-    transition-delay: 5s;
-}
+  /* Emojis sind standardmäßig sichtbar (Mobile) */
+  .content .emoji {
+    opacity: 1;
+  }
 
 
+  /* ============================================
+     DESKTOP VERSION: Opacity-Effekte nur ab 769px
+     ============================================ */
+
+  @media (min-width: 769px) {
+    /* Desktop: größere Schrift */
+    .content {
+      font-size: 2.5rem;
+    }
+
+    /* Alle farbigen Elemente starten unsichtbar */
+    .content .font_color_royalblue,
+    .content .font_color_rose,
+    .content .font_color_red,
+    .content .font_color_darkgreen,
+    .content .font_color_signalpink,
+    .content .font_color_orange,
+    .content .font_color_brown,
+    .content .font_color_signalgreen,
+    .content .font_color_babyblue,
+    .content .klasse,
+    .content .collab {
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+      transition-delay: 5s; /* Verzögerung beim Ausblenden */
+    }
+
+    /* Hover macht sie sichtbar */
+    .content .font_color_royalblue:hover,
+    .content .font_color_rose:hover,
+    .content .font_color_red:hover,
+    .content .font_color_darkgreen:hover,
+    .content .font_color_signalpink:hover,
+    .content .font_color_orange:hover,
+    .content .font_color_brown:hover,
+    .content .font_color_signalgreen:hover,
+    .content .font_color_babyblue:hover,
+    .content .klasse:hover,
+    .content .collab:hover {
+      opacity: 1;
+      transition-delay: 0s; /* Sofort sichtbar beim Hover */
+    }
+
+    /* Highlighted-Elemente sind auf Desktop immer sichtbar */
+    .content .highlighted {
+      opacity: 1 !important;
+      transition-delay: 0s !important;
+    }
+
+    /* Emojis auf Desktop: unsichtbar bis Hover */
+    .content .emoji {
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+      transition-delay: 5s;
+    }
+
+    .content .emoji:hover {
+      opacity: 1;
+      transition-delay: 0s;
+    }
+  }
+
+
+  /* ============================================
+     MOBILE ANPASSUNGEN (max-width: 768px)
+     ============================================ */
+
+  @media (max-width: 768px) {
+    /* Personenliste auf Mobile: volle Breite */
+    #person_list.show {
+      max-width: 100%;
+    }
+
+    /* Info-Text auf Mobile: volle Breite */
+    #info_text.show {
+      max-width: 100%;
+    }
+  }
+
+/* Die Struktur hatten wir davor scho -> als der .content noch die farbe weiß hatte */
 #person_list {
     position: absolute; /* damit die person_list über den content schwebt */
     left: var(--page-padding);
@@ -388,4 +378,5 @@
 img{
   width: 20px;
 }
+
 
