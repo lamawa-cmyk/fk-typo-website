@@ -325,7 +325,7 @@
     /* Highlighted-Elemente sind auf Desktop immer sichtbar */
     .content .highlighted {
       opacity: 1 !important;
-      transition:  opacity 0.075s ease-out !important;
+      transition:  opacity 0s ease-out !important;
       transition-delay: 0s !important;
     }
 
