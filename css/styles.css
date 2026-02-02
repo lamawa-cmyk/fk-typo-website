@@ -275,6 +275,10 @@
     opacity: 1;
   }
 
+    /* Abstand rechts der Project Titles */
+    .content .project_title {
+    margin-right:  25px;
+  }
 
   /* ============================================
      DESKTOP VERSION: Opacity-Effekte nur ab 769px
