@@ -9,7 +9,18 @@
 :root {
   --page-padding: 16px;
   --font-base: "ABC Monument Grotesk", Arial, Helvetica, sans-serif;
+
+  /* Typografisches Raster */
+  --font-small: 24px;
+  --line-small: 28px;
+
+  --font-large: 40px;
+  --line-large: 56px;
+
+  --title-gap: 25px;
+  --baseline-offset: 5px; /* damit Namensliste auf selber Grundlinie anfängt wie Projekttitel */
 }
+
 
 *{
   box-sizing: border-box; /* WICHTIG dass die Seitenränder clean bleiben */
@@ -26,13 +37,13 @@
 .header-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  font-size: 1.5rem;
+  align-items: baseline; /* wichtig für Typo */
+  font-size: var(--font-small);
+  line-height: var(--line-small);
   font-weight: normal;
   color: rgb(184,184,184);
-  margin-bottom: 60px;
-} 
-
+  margin-bottom: var(--line-large);
+}
 
 .left-side {
   display: flex;
@@ -43,24 +54,41 @@
     color: rgb(184,184,184);
   }
   
-  .hidden{
-    font-size: 1.5rem;
-    cursor: default;
-  }
-
 
   /*Personenliste mit Farbigen Boxen beim Darüberhovern*/
 
-    #person_list p {
+  #person_list {
+    position: absolute;
+    left: var(--page-padding);
+    margin-left: 1.4px;
+  
+    font-size: var(--font-small);
+    line-height: var(--line-small);
+  
+    padding-top: calc( 
+      (var(--line-large) - var(--line-small)) / 2
+      + var(--baseline-offset)
+    );  /* damit Namensliste auf selber Grundlinie anfängt wie Projekttitel */
+  
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }  
+  
+  #person_list p {
+    margin: 0;
+    padding: 0;
+  
+    display: block;
+    width: fit-content;
+  
     position: relative;
-    z-index: 10; /* neue Ebene */
-    margin-left: 0;
-    padding-left: 0;
-    display: block;      /* WICHTIG */
-    width: fit-content;  /* Box nur so breit wie der Text */
+    z-index: 10;
+  
     cursor: default;
     color: rgb(184,184,184);
   }
+
 
   #person_list p::before {
     content: "";
@@ -194,16 +222,13 @@
     color:  rgb(0,229,0);
   }
   
+  
   /* ================================
       Neue Struktur: Farben sind Basis 
     ===================================== */
 
   /* Basis-Styles für Content - gilt für ALLE Geräte */
-  .content{
-    font-size: 1.2rem; /* Mobile-First: kleinere Schrift als Standard */
-    cursor: default;
-  }
-
+ 
   .content a{
     color: inherit; /* Farbe vom Elternelement wird übernommen */
     text-decoration: none;
@@ -275,22 +300,29 @@
     opacity: 1;
   }
 
-    /* Abstand rechts der Project Titles */
-    .content .project_title {
-    margin-right:  25px;
-  }
 
   /* ============================================
      DESKTOP VERSION: Opacity-Effekte nur ab 769px
      ============================================ */
 
-  @media (min-width: 769px) {
-    /* Desktop: größere Schrift */
-    .content {
-      font-size: 2.5rem;
+     .content {
+      font-size: var(--font-large);
+      line-height: var(--line-large);
+    }  
+  
+    .project_title {
+      display: inline;
+      vertical-align: baseline;
     }
+    
+    .project_title::after {
+      content: " ";
+      margin-right: var(--title-gap);
+    }
+    
+     @media (min-width: 769px) {
 
-    /* Alle farbigen Elemente starten unsichtbar */
+     /* Alle farbigen Elemente starten unsichtbar */
     .content .font_color_royalblue,
     .content .font_color_rose,
     .content .font_color_red,
@@ -351,19 +383,6 @@
       max-width: 100%;
     }
   }
-
-/* Die Struktur hatten wir davor scho -> als der .content noch die farbe weiß hatte */
-#person_list {
-    position: absolute; /* damit die person_list über den content schwebt */
-    left: var(--page-padding);
-    margin-left: 1.4px; /* Liste etwas nach rechts geschoben, dass aligned mit dem Content darunter */   
-    line-height: 35%; 
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    max-height: 0;
-    padding: 0;
-    transition: max-height 0.3s ease-out; /* ← NUR Höhe */
-}
 
 #person_list.show {
   max-height: 1000px;

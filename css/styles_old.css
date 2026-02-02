@@ -1,4 +1,4 @@
-  /* alte Struktur 28.01.25
+  /* alte Struktur 28.01.26
   HIER WAR DER .CONTENT WEISS UND HAT ERST BEIM DRÜBER FAHREN EINE FARBE BEKOMMEN */
   /* Werke bekommen immer die jeweilige Farbe */
   .content{
@@ -165,3 +165,82 @@
     transition-delay: 5s;
 }
 
+
+
+ /* alte Schriftgrößen 01.02.26 */
+
+
+.hidden{
+  font-size: 24px;
+  cursor: default;
+}
+
+ /* funktioniert aber nicht sauber */
+
+/*:root ist das oberste Element der Seite*/
+:root {
+  --page-padding: 16px;
+  --font-base: "ABC Monument Grotesk", Arial, Helvetica, sans-serif;
+
+  --baseline: 12px;
+
+  --font-small: 24px;
+  --line-small: 28.98px;
+
+  --font-large: 40px;
+  --line-large: 56px; /* 60px */
+}
+
+*{
+  box-sizing: border-box; /* WICHTIG dass die Seitenränder clean bleiben */
+  }
+
+  body {
+  position: relative;
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
+  margin: 0;
+  font-family: var(--font-base);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: normal;
+  color: rgb(184,184,184);
+  margin-bottom: 60px;
+  font-size: 24px;   /* gleiche Größe wie Namensliste */
+} 
+
+.left-side {
+  display: flex;
+  gap: 10px;
+}
+  .link_hgb {
+    text-decoration: none;
+    color: rgb(184,184,184);
+  }
+  
+
+  #person_list {
+    font-size: var(--font-small);
+    line-height: 28.98px;
+    transform: translateY(19px); /* Personenliste etwas nach unten schieben, damit auf selber Grundlinie */
+  }
+ 
+
+  .content {
+    font-size: var(--font-large);
+    line-height: var(--line-large);
+  }
+
+  .project_title {
+    display: inline;
+    vertical-align: baseline;
+  }
+  
+  .project_title::after {
+    content: " ";
+    margin-right: 25px;
+  }
