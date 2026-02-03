@@ -387,11 +387,11 @@
 
      @media (max-width: 768px) {
       :root {
-        --font-large: 28px;
+        --font-large: 22px;
         --line-large: 30px;
 
-       --font-small: 20px;
-       --line-small: 24px;
+       --font-small: 18px;
+       --line-small: 20px;
       }
     }
 
