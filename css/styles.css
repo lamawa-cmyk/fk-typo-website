@@ -387,8 +387,8 @@
 
      @media (max-width: 768px) {
       :root {
-        --font-large: 32px;
-        --line-large: 48px;
+        --font-large: 28px;
+        --line-large: 30px;
 
        --font-small: 20px;
        --line-small: 24px;
