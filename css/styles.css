@@ -41,19 +41,31 @@
   font-size: var(--font-small);
   line-height: var(--line-small);
   font-weight: normal;
-  color: rgb(184,184,184);
   margin-bottom: var(--line-large);
 }
 
 .left-side {
   display: flex;
-  gap: 10px;
+  gap: 4.5px;
 }
-  .link_hgb {
-    text-decoration: none;
-    color: rgb(184,184,184);
-  }
   
+.header-pill {
+  display: inline-flex;
+  align-items: baseline;
+
+  background-color: rgb(190, 190, 190);
+  color: rgb(239,240,241);
+
+  padding: 1px 4.5px;
+  border-left: 0px;
+  text-decoration: none; /* wichtig für <a> */
+  cursor: pointer;
+}
+
+.header-pill:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(239,240,241);
+}
 
   /*Personenliste mit Farbigen Boxen beim Darüberhovern*/
 
@@ -397,9 +409,10 @@
     user-select: none;
 }
 
+/* Kommentar Marie: Können wir das nicht rausnehmen, weil oben schon definiert
 #toggle-button:hover {
     color: #666;
-}
+} */
 
 /* info-button */
 #info-button {
@@ -410,9 +423,10 @@
     padding-right: 5px;
 }
 
+/* Kommentar Marie: Können wir das nicht rausnehmen, weil oben schon definiert
 #info-button:hover {
     color: #666;
-}
+} */
 
 #info_text {
     overflow: hidden;
