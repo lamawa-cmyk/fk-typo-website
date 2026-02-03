@@ -384,69 +384,79 @@
      MOBILE ANPASSUNGEN (max-width: 768px)
      ============================================ */
 
-  @media (max-width: 768px) {
-    /* Personenliste auf Mobile: volle Breite */
+
+     @media (max-width: 768px) {
+      :root {
+        --font-large: 32px;
+        --line-large: 48px;
+
+       --font-small: 20px;
+       --line-small: 24px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      /* Personenliste auf Mobile: volle Breite */
+     #person_list.show {
+      max-width: 100%;
+     }
+
+      /* Info-Text auf Mobile: volle Breite */
+      #info_text.show {
+      max-width: 100%;
+      }
+   }
+
     #person_list.show {
-      max-width: 100%;
+      max-height: 1000px;
+      max-width: 20%;
     }
 
-    /* Info-Text auf Mobile: volle Breite */
-    #info_text.show {
-      max-width: 100%;
+    #toggle-button {
+      font-size: 1.5rem;
+      font-style: normal;
+      cursor: pointer;
+      user-select: none;
     }
-  }
-
-#person_list.show {
-  max-height: 1000px;
-  max-width: 20%;
-}
-
-
-#toggle-button {
-    font-size: 1.5rem;
-    font-style: normal;
-    cursor: pointer;
-    user-select: none;
-}
 
 /* Kommentar Marie: Können wir das nicht rausnehmen, weil oben schon definiert
 #toggle-button:hover {
     color: #666;
 } */
 
-/* info-button */
-#info-button {
-    font-size: 1.5rem;
-    font-style: normal;
-    cursor: pointer;
-    user-select: none;
-    padding-right: 5px;
-}
+    /* info-button */
+    #info-button {
+      font-size: 1.5rem;
+      font-style: normal;
+      cursor: pointer;
+      user-select: none;
+      padding-right: 5px;
+    }
 
 /* Kommentar Marie: Können wir das nicht rausnehmen, weil oben schon definiert
 #info-button:hover {
     color: #666;
 } */
 
-#info_text {
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    max-height: 0;
-    padding: 0 5px;
-}
+    #info_text {
+     overflow: hidden;
+     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+      max-height: 0;
+      padding: 0 5px;
+    }
 
-#info_text.show {
+    #info_text.show {
     max-height: 1000px;
     padding: 5px;
     max-width: calc(80% - 10px);  /* damit sich der Text nicht mit der Namenliste überschneidet */
     margin-left: auto;
-}
+    }
 
 
 /* Bilddarstellung*/
 
-img{
-  width: 20px;
-}
+    img{
+      width: 20px;
+    }
 
 
