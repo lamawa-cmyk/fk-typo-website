@@ -333,10 +333,10 @@
     }
     
     .project_title {
-      hyphens: auto;
-      overflow-wrap: break-word;
+      hyphens: manual;
+      overflow-wrap: break-word; /* falls ein Wort wirklich zu lang ist */
     }
-    
+
      @media (min-width: 769px) {
 
      /* Alle farbigen Elemente starten unsichtbar */
