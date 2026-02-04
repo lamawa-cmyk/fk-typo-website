@@ -400,14 +400,19 @@
        --title-gap: 6px;
       }
 
-         /* Personenliste auf Mobile: volle Breite */
-     #person_list.show {
-      max-width: 100%;
-     }
+      /* Personenliste auf Mobile: volle Breite */
+      #person_list.show {
+        max-width: 100%;
+      }
 
       /* Info-Text auf Mobile: volle Breite */
       #info_text.show {
-      max-width: 100%;
+        max-width: 100%;
+      }
+
+       /* Größerer Abstand zwischen Header und Inhalt */
+      .header-content {
+        margin-bottom: 60px;
       }
     }
 
