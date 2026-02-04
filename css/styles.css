@@ -334,7 +334,6 @@
     
     .project_title {
       hyphens: manual;
-      overflow-wrap: break-word; /* falls ein Wort wirklich zu lang ist */
     }
 
      @media (min-width: 769px) {
