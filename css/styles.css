@@ -413,7 +413,7 @@
     }
 
     #toggle-button {
-      font-size: 1.5rem;
+      font-size: var(--font-small);
       font-style: normal;
       cursor: pointer;
       user-select: none;
@@ -426,7 +426,7 @@
 
     /* info-button */
     #info-button {
-      font-size: 1.5rem;
+      font-size: var(--font-small);
       font-style: normal;
       cursor: pointer;
       user-select: none;
@@ -439,8 +439,8 @@
 } */
 
     #info_text {
-     overflow: hidden;
-     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
       max-height: 0;
       padding: 0 5px;
     }
