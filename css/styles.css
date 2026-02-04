@@ -392,11 +392,11 @@
 
        --font-small: 18px;
        --line-small: 20px;
-      }
-    }
 
-    @media (max-width: 768px) {
-      /* Personenliste auf Mobile: volle Breite */
+       --title-gap: 6px;
+      }
+
+         /* Personenliste auf Mobile: volle Breite */
      #person_list.show {
       max-width: 100%;
      }
@@ -405,7 +405,7 @@
       #info_text.show {
       max-width: 100%;
       }
-   }
+    }
 
     #person_list.show {
       max-height: 1000px;
@@ -442,12 +442,8 @@
     margin-left: auto;
     }
 
-
-/* Bilddarstellung
-
-    .content_pic img (max-width: 768px){
-      height: 5px;
-      width: auto;
-    }*/
-
+    .project_title::after {
+      content: " ";
+      margin-right: var(--title-gap);
+    }
 
