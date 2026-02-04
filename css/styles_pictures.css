@@ -3,3 +3,14 @@ height: 28px;
 width: auto;
 }
 
+  /* ============================================
+     MOBILE ANPASSUNGEN (max-width: 768px)
+     ============================================ */
+
+    .content_pic img (max-width: 768px){
+    height: 5px;
+    width: auto;
+    }
+
+
+

@@ -453,11 +453,11 @@
     }
 
 
-/* Bilddarstellung*/
+/* Bilddarstellung
 
-    .content_pic img{
+    .content_pic img (max-width: 768px){
       height: 5px;
       width: auto;
-    }
+    }*/
 
 
