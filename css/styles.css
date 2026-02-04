@@ -40,6 +40,16 @@
   font-family: var(--font-base);
 }
 
+body {
+  scrollbar-gutter: stable;
+}
+
+/* optional Fallback */
+@supports not (scrollbar-gutter: stable) {
+  body {
+    overflow-y: scroll;
+  }
+}
 
 
 /* ======================================
@@ -95,11 +105,6 @@
   padding-right: 5px;
 }
 
-#info_text.show {
-  max-height: 1000px;
-  padding-bottom: 52px;
-  }
-
 #info_text {
   font-size: var(--font-running-text);
   line-height: var(--line-running-text);
@@ -109,14 +114,18 @@
   transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 
   max-height: 0;
-  padding: 0 5px;
 
-  /* 👇 HIER SCHON setzen */
+  /* Desktop-Breite */
   max-width: calc(80% - 10px);
   margin-left: auto;
   padding-left: 25px;
+  padding-right: 5px;
 }
 
+#info_text.show {
+  max-height: 1500px;
+  padding-bottom: 52px;
+}
 
   /*Personenliste mit Farbigen Boxen beim Darüberhovern*/
 
@@ -140,7 +149,6 @@
   
   #person_list p {
     margin: 0;
-    padding: 0;
   
     display: block;
     width: fit-content;
@@ -150,19 +158,29 @@
   
     cursor: default;
     color: rgb(184,184,184);
+
+    position: relative;
+
+    padding-left: 4.5px;        /* Luft IN der Box */
+    padding-right: 4.5px;
+    margin-left: -4.5px;        /* Text bleibt an gleicher Stelle */
   }
 
 
   #person_list p::before {
     content: "";
     position: absolute;
-    left: calc(-1 * var(--page-padding)); /* 👈 Box geht über Rand */
-    right: -2px;
-    top: 30%;
-    height: 1.2em;
-    transform: translateY(-50%);
+  
+    /* dein Alignment bleibt */
+    left: calc(-1 * var(--page-padding));
+    right: -3px;
+  
+    /* Box höher machen */
+    top: -0.8px;
+    bottom: -0.8px;
+  
     background-color: transparent;
-    z-index: -1; /* bleibt hinter dem Text */
+    z-index: -1;
     transition: background-color 0.15s ease;
   }
 
@@ -291,6 +309,7 @@
   }
   
   
+
   /* ==============================================
       Main Content: Projekte (gilt für ALLE Geräte) 
     =============================================== */
@@ -375,6 +394,7 @@
   }
 
 
+
   /* =============================================
      DESKTOP VERSION: Opacity-Effekte nur ab 769px
      ============================================= */
@@ -446,6 +466,7 @@
   }
 
 
+  
   /* ============================================
      MOBILE ANPASSUNGEN (max-width: 768px)
      ============================================ */
@@ -457,28 +478,135 @@
         --line-large: 30px;
 
        --font-small: 18px;
-       --line-small: 20px;
+       --line-small: 24px;
 
        --title-gap: 6px;
       }
 
-      /* Personenliste auf Mobile: volle Breite */
-      #person_list.show {
-        max-width: 100%;
+
+  /* Header Mobile */
+
+      .header-content {
+        margin-bottom: 60px;
       }
 
-      /* Info-Text auf Mobile: volle Breite */
+      #info_text {
+        max-width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: var(--font-small);
+        line-height: var(--line-small);
+      }
+
       #info_text.show {
         max-width: 100%;
       }
 
-       /* Größerer Abstand zwischen Header und Inhalt */
-      .header-content {
-        margin-bottom: 60px;
-      }
-    }
-
-
     
+  /* Personenliste Mobile */
+
+      #person_list {
+        position: static;       /* nicht mehr absolut */
+        max-width: 100%;
+        margin-left: 0;
+        left: 0;
+      }
+    
+      #person_list.show {
+        max-width: 100%;
+        padding-bottom: 30px;
+      }
+    
+      #person_list p {
+        width: fit-content;         /* Namen dürfen volle Breite nutzen */
+        color: rgb(239,240,241);
+      }
+
+      /* Boxen immer sichtbar (nicht nur bei Hover) */
+      #person_list .font_color_red::before {
+        background-color: rgb(255,8,28);
+      }
+    
+      #person_list .font_color_peach::before {
+        background-color: rgb(255,140,135);
+      }
+    
+      #person_list .font_color_babyblue::before {
+        background-color: rgb(132,182,213);
+      }
+    
+      #person_list .font_color_signalpink::before {
+        background-color: rgb(255,11,250);
+      }
+    
+      #person_list .font_color_darkgreen::before {
+        background-color: rgb(0,107,18);
+      }
+    
+      #person_list .font_color_yellow::before {
+        background-color: rgb(251,215,6);
+      }
+    
+      #person_list .font_color_royalblue::before {
+        background-color: rgb(0,2,249);
+      }
+    
+      #person_list .font_color_purple::before {
+        background-color: rgb(147,65,194);
+      }
+    
+      #person_list .font_color_navygreen::before {
+        background-color: rgb(143,177,132);
+      }
+    
+      #person_list .font_color_darkblue::before {
+        background-color: rgb(0,0,147);
+      }
+    
+      #person_list .font_color_cyan::before {
+        background-color: rgb(0,150,215);
+      }
+    
+      #person_list .font_color_ochre::before {
+        background-color: rgb(180,136,58);
+      }
+    
+      #person_list .font_color_burgundy::before {
+        background-color: rgb(157,23,21);
+      }
+    
+      #person_list .font_color_rose::before {
+        background-color: rgb(255,166,252);
+      }
+    
+      #person_list .font_color_darkpurple::before {
+        background-color: rgb(122,23,122);
+      }
+    
+      #person_list .font_color_olive::before {
+        background-color: rgb(187,183,125);
+      }
+    
+      #person_list .font_color_brown::before {
+        background-color: rgb(121,69,33);
+      }
+    
+      #person_list .font_color_turquoise::before {
+        background-color: rgb(122,201,205);
+      }
+    
+      #person_list .font_color_orange::before {
+        background-color: rgb(232,147,70);
+      }
+    
+      #person_list .font_color_signalgreen::before {
+        background-color: rgb(0,229,0);
+      }
+    
+    }
+    
+
+
     /* To Do: Infotext und Namensliste für Mobile anpassen */
     

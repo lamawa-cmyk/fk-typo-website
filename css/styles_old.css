@@ -244,3 +244,26 @@
     content: " ";
     margin-right: 25px;
   }
+
+
+
+
+   /* 04.02.26 
+   Person_list links aligned mit Projekttiteln*/
+
+  #person_list p::before {
+    content: "";
+    position: absolute;
+  
+    /* dein Alignment bleibt */
+    left: calc(-1 * var(--page-padding));
+    right: -3px;
+  
+    /* Box höher machen */
+    top: -0.8px;
+    bottom: -0.8px;
+  
+    background-color: transparent;
+    z-index: -1;
+    transition: background-color 0.15s ease;
+  }
