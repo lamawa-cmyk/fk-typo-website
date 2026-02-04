@@ -455,8 +455,9 @@
 
 /* Bilddarstellung*/
 
-    img{
-      width: 20px;
+    .content_pic img{
+      height: 18px;
+      width: auto;
     }
 
 
