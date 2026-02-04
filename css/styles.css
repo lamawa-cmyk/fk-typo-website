@@ -332,6 +332,11 @@
       margin-right: var(--title-gap);
     }
     
+    .project_title {
+      hyphens: auto;
+      overflow-wrap: break-word;
+    }
+    
      @media (min-width: 769px) {
 
      /* Alle farbigen Elemente starten unsichtbar */
