@@ -419,11 +419,6 @@
       user-select: none;
     }
 
-/* Kommentar Marie: Können wir das nicht rausnehmen, weil oben schon definiert
-#toggle-button:hover {
-    color: #666;
-} */
-
     /* info-button */
     #info-button {
       font-size: var(--font-small);
@@ -432,11 +427,6 @@
       user-select: none;
       padding-right: 5px;
     }
-
-/* Kommentar Marie: Können wir das nicht rausnehmen, weil oben schon definiert
-#info-button:hover {
-    color: #666;
-} */
 
     #info_text {
       overflow: hidden;

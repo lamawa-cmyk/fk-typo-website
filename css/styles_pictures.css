@@ -6,7 +6,7 @@ width: auto;
 /* MOBILE */
 @media (max-width: 768px) {
     .content_pic img {
-      height: 18px;
+      height: 15.3px;
       width: auto;
     }
   }
