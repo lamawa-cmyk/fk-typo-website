@@ -251,6 +251,48 @@
    /* 04.02.26 
    Person_list links aligned mit Projekttiteln*/
 
+
+   
+   /*Personenliste mit Farbigen Boxen beim Darüberhovern*/
+
+   #person_list {
+    position: absolute;
+    left: var(--page-padding);
+    margin-left: 1.4px;
+  
+    font-size: var(--font-small);
+    line-height: var(--line-small);
+  
+    padding-top: calc( 
+      (var(--line-large) - var(--line-small)) / 2
+      + var(--baseline-offset)
+    );  /* damit Namensliste auf selber Grundlinie anfängt wie Projekttitel */
+  
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }  
+  
+  #person_list p {
+    margin: 0;
+  
+    display: block;
+    width: fit-content;
+  
+    position: relative;
+    z-index: 10;
+  
+    cursor: default;
+    color: rgb(184,184,184);
+
+    position: relative;
+
+    padding-left: 4.5px;        /* Luft IN der Box */
+    padding-right: 4.5px;
+    margin-left: -4.5px;        /* Text bleibt an gleicher Stelle */
+  }
+
+
   #person_list p::before {
     content: "";
     position: absolute;
@@ -266,4 +308,128 @@
     background-color: transparent;
     z-index: -1;
     transition: background-color 0.15s ease;
+  }
+
+  #person_list.show {
+    max-height: 1000px;
+    max-width: 20%;
+  }
+
+  /* Text wird heller bei Hover */
+  #person_list p:hover {
+    color: rgb(239,240,241);
+}
+
+/* Box-Farben */
+  #person_list .font_color_red:hover::before {
+    background-color: rgb(255,8,28);
+  }
+  /* hier: wenn man ueber namesnliste geht, werden alle Projekte in der richtigen Farbe angezeigt*/
+  .content .font_color_red.highlighted{
+    color: rgb(255,8,28);
+  }
+
+  #person_list .font_color_peach:hover::before {
+    background-color: rgb(255,140,135);
+  }
+
+  #person_list .font_color_babyblue:hover::before {
+    background-color: rgb(132,182,213);
+  }
+    .content .font_color_babyblue.highlighted{
+    color:  rgb(139,182,215);
+  }
+
+  #person_list .font_color_signalpink:hover::before {
+    background-color: rgb(255,11,250);
+  }
+    .content .font_color_signalpink.highlighted{
+    color: rgb(255,11,250);
+  }
+
+  #person_list .font_color_lilac:hover::before {
+    background-color: rgb(174,136,225);
+  }
+
+  #person_list .font_color_darkgreen:hover::before {
+    background-color: rgb(0,107,18);
+  }
+  .content .font_color_darkgreen.highlighted{
+    color: rgb(0,107,18);
+  }
+  #person_list .font_color_yellow:hover::before {
+    background-color: rgb(251,215,6);
+  }
+  
+  #person_list .font_color_royalblue:hover::before {
+    background-color: rgb(0,2,249);
+  }
+  .content .font_color_royalblue.highlighted{
+    color: rgb(0,2,249) !important;
+  }
+  
+  #person_list .font_color_purple:hover::before {
+    background-color: rgb(147,65,194);
+  }
+
+  #person_list .font_color_navygreen:hover::before {
+    background-color: rgb(143,177,132);
+  }
+
+  #person_list .font_color_darkblue:hover::before {
+    background-color: rgb(0,0,147);
+  }
+
+  #person_list .font_color_cyan:hover::before {
+    background-color: rgb(0,150,215);
+  }
+
+  #person_list .font_color_ochre:hover::before {
+    background-color: rgb(180,136,58);
+  }
+
+  #person_list .font_color_burgundy:hover::before {
+    background-color: rgb(157,23,21);
+  }
+
+  #person_list .font_color_rose:hover::before {
+    background-color: rgb(255,166,252);
+  }
+    .content .font_color_rose.highlighted{
+    color: rgb(255,166,252);
+  }
+
+  #person_list .font_color_darkpurple:hover::before {
+    background-color: rgb(122,23,122);
+  }
+
+  #person_list .font_color_olive:hover::before {
+    background-color: rgb(187,183,125);
+  }
+
+  #person_list .font_color_brown:hover::before {
+    background-color: rgb(121,69,33);
+  }
+
+    .content .font_color_brown.highlighted {
+    color: rgb(129,66,23);
+  } 
+
+  #person_list .font_color_turquoise:hover::before {
+    background-color: rgb(122,201,205);
+  }
+
+  #person_list .font_color_orange:hover::before {
+    background-color: rgb(232,147,70);
+  }
+    .content .font_color_orange.highlighted{
+    color: rgb(238,142,45);
+  }
+  
+  #person_list .font_color_signalgreen:hover::before {
+    background-color: rgb(0,229,0);
+  }
+
+    .content .font_color_signalgreen.highlighted{
+    color:  rgb(0,229,0);
   }

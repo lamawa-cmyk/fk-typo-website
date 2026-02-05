@@ -78,7 +78,7 @@ body {
   background-color: rgb(190, 190, 190);
   color: rgb(239,240,241);
 
-  padding: 1px 4.5px;
+  padding: 0.5px 4.3px;
   border-left: 0px;
   text-decoration: none; /* wichtig für <a> */
   cursor: pointer;
@@ -127,13 +127,12 @@ body {
   padding-bottom: 52px;
 }
 
+
   /*Personenliste mit Farbigen Boxen beim Darüberhovern*/
 
   #person_list {
     position: absolute;
     left: var(--page-padding);
-    margin-left: 1.4px;
-  
     font-size: var(--font-small);
     line-height: var(--line-small);
   
@@ -149,39 +148,12 @@ body {
   
   #person_list p {
     margin: 0;
-  
     display: block;
     width: fit-content;
-  
-    position: relative;
-    z-index: 10;
-  
+    padding: 0px 4.3px;          
+    background: transparent;
     cursor: default;
     color: rgb(184,184,184);
-
-    position: relative;
-
-    padding-left: 4.5px;        /* Luft IN der Box */
-    padding-right: 4.5px;
-    margin-left: -4.5px;        /* Text bleibt an gleicher Stelle */
-  }
-
-
-  #person_list p::before {
-    content: "";
-    position: absolute;
-  
-    /* dein Alignment bleibt */
-    left: calc(-1 * var(--page-padding));
-    right: -3px;
-  
-    /* Box höher machen */
-    top: -0.8px;
-    bottom: -0.8px;
-  
-    background-color: transparent;
-    z-index: -1;
-    transition: background-color 0.15s ease;
   }
 
   #person_list.show {
@@ -189,123 +161,112 @@ body {
     max-width: 20%;
   }
 
-  /* Text wird heller bei Hover */
-  #person_list p:hover {
-    color: rgb(239,240,241);
-}
 
 /* Box-Farben */
-  #person_list .font_color_red:hover::before {
+
+  #person_list .font_color_red:hover {
     background-color: rgb(255,8,28);
-  }
-  /* hier: wenn man ueber namesnliste geht, werden alle Projekte in der richtigen Farbe angezeigt*/
-  .content .font_color_red.highlighted{
-    color: rgb(255,8,28);
+    color: rgb(239,240,241);
   }
 
-  #person_list .font_color_peach:hover::before {
+  #person_list .font_color_peach:hover {
     background-color: rgb(255,140,135);
+    color: rgb(239,240,241);
   }
 
-  #person_list .font_color_babyblue:hover::before {
+  #person_list .font_color_babyblue:hover {
     background-color: rgb(132,182,213);
-  }
-    .content .font_color_babyblue.highlighted{
-    color:  rgb(139,182,215);
+    color: rgb(239,240,241);
   }
 
-  #person_list .font_color_signalpink:hover::before {
+  #person_list .font_color_signalpink:hover {
     background-color: rgb(255,11,250);
+    color: rgb(239,240,241);
   }
-    .content .font_color_signalpink.highlighted{
-    color: rgb(255,11,250);
-  }
-
-  #person_list .font_color_lilac:hover::before {
+  
+  #person_list .font_color_lilac:hover {
     background-color: rgb(174,136,225);
+    color: rgb(239,240,241);
   }
 
-  #person_list .font_color_darkgreen:hover::before {
+  #person_list .font_color_darkgreen:hover {
     background-color: rgb(0,107,18);
+    color: rgb(239,240,241);
   }
-  .content .font_color_darkgreen.highlighted{
-    color: rgb(0,107,18);
-  }
-  #person_list .font_color_yellow:hover::before {
+
+  #person_list .font_color_yellow:hover {
     background-color: rgb(251,215,6);
+    color: rgb(239,240,241);
   }
   
-  #person_list .font_color_royalblue:hover::before {
+  #person_list .font_color_royalblue:hover {
     background-color: rgb(0,2,249);
+    color: rgb(239,240,241);
   }
-  .content .font_color_royalblue.highlighted{
-    color: rgb(0,2,249) !important;
-  }
-  
-  #person_list .font_color_purple:hover::before {
+
+  #person_list .font_color_purple:hover {
     background-color: rgb(147,65,194);
+    color: rgb(239,240,241);
   }
 
-  #person_list .font_color_navygreen:hover::before {
+  #person_list .font_color_navygreen:hover {
     background-color: rgb(143,177,132);
-  }
-
-  #person_list .font_color_darkblue:hover::before {
-    background-color: rgb(0,0,147);
-  }
-
-  #person_list .font_color_cyan:hover::before {
-    background-color: rgb(0,150,215);
-  }
-
-  #person_list .font_color_ochre:hover::before {
-    background-color: rgb(180,136,58);
-  }
-
-  #person_list .font_color_burgundy:hover::before {
-    background-color: rgb(157,23,21);
-  }
-
-  #person_list .font_color_rose:hover::before {
-    background-color: rgb(255,166,252);
-  }
-    .content .font_color_rose.highlighted{
-    color: rgb(255,166,252);
-  }
-
-  #person_list .font_color_darkpurple:hover::before {
-    background-color: rgb(122,23,122);
-  }
-
-  #person_list .font_color_olive:hover::before {
-    background-color: rgb(187,183,125);
-  }
-
-  #person_list .font_color_brown:hover::before {
-    background-color: rgb(121,69,33);
-  }
-
-    .content .font_color_brown.highlighted {
-    color: rgb(129,66,23);
-  } 
-
-  #person_list .font_color_turquoise:hover::before {
-    background-color: rgb(122,201,205);
-  }
-
-  #person_list .font_color_orange:hover::before {
-    background-color: rgb(232,147,70);
-  }
-    .content .font_color_orange.highlighted{
-    color: rgb(238,142,45);
+    color: rgb(239,240,241);
   }
   
-  #person_list .font_color_signalgreen:hover::before {
-    background-color: rgb(0,229,0);
+  #person_list .font_color_darkblue:hover {
+    background-color: rgb(0,0,147);
+    color: rgb(239,240,241);
+  }
+  
+  #person_list .font_color_cyan:hover {
+    background-color: rgb(0,150,215);
+    color: rgb(239,240,241);
   }
 
-    .content .font_color_signalgreen.highlighted{
-    color:  rgb(0,229,0);
+  #person_list .font_color_ochre:hover {
+    background-color: rgb(180,136,58);
+    color: rgb(239,240,241);
+  }
+
+  #person_list .font_color_burgundy:hover {
+    background-color: rgb(157,23,21);
+    color: rgb(239,240,241);
+  }
+
+  #person_list .font_color_rose:hover {
+    background-color: rgb(255,166,252);
+    color: rgb(239,240,241);
+  }
+
+  #person_list .font_color_darkpurple:hover {
+    background-color: rgb(122,23,122);
+    color: rgb(239,240,241);
+  }
+
+  #person_list .font_color_olive:hover {
+    background-color: rgb(187,183,125);
+    color: rgb(239,240,241);
+  }
+
+  #person_list .font_color_brown:hover {
+    background-color: rgb(121,69,33);
+    color: rgb(239,240,241);
+  }
+
+  #person_list .font_color_turquoise:hover {
+    background-color: rgb(122,201,205);
+    color: rgb(239,240,241);
+  }
+
+  #person_list .font_color_orange:hover {
+    background-color: rgb(232,147,70);
+    color: rgb(239,240,241);
+  }
+
+  #person_list .font_color_signalgreen:hover {
+    background-color: rgb(0,229,0);
+    color: rgb(239,240,241);
   }
   
   
@@ -483,11 +444,26 @@ body {
        --title-gap: 6px;
       }
 
+      body {
+        padding-top: 72px;   /* Headerhöhe + Luft */
+      }
 
   /* Header Mobile */
 
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        padding-left: var(--page-padding);
+        padding-right: var(--page-padding);
+
+        z-index: 1000;
+      }
+
       .header-content {
-        margin-bottom: 60px;
+        margin-bottom: 30px;
       }
 
       #info_text {
@@ -511,6 +487,7 @@ body {
         max-width: 100%;
         margin-left: 0;
         left: 0;
+        padding-top: 0;
       }
     
       #person_list.show {
@@ -524,83 +501,87 @@ body {
       }
 
       /* Boxen immer sichtbar (nicht nur bei Hover) */
-      #person_list .font_color_red::before {
+      #person_list .font_color_red {
         background-color: rgb(255,8,28);
       }
     
-      #person_list .font_color_peach::before {
+      #person_list .font_color_peach {
         background-color: rgb(255,140,135);
       }
     
-      #person_list .font_color_babyblue::before {
+      #person_list .font_color_babyblue {
         background-color: rgb(132,182,213);
       }
     
-      #person_list .font_color_signalpink::before {
+      #person_list .font_color_signalpink {
         background-color: rgb(255,11,250);
       }
     
-      #person_list .font_color_darkgreen::before {
+      #person_list .font_color_lilac {
+      background-color: rgb(174,136,225);
+      }
+
+      #person_list .font_color_darkgreen {
         background-color: rgb(0,107,18);
       }
     
-      #person_list .font_color_yellow::before {
+      #person_list .font_color_yellow {
         background-color: rgb(251,215,6);
       }
     
-      #person_list .font_color_royalblue::before {
+      #person_list .font_color_royalblue {
         background-color: rgb(0,2,249);
       }
     
-      #person_list .font_color_purple::before {
+      #person_list .font_color_purple {
         background-color: rgb(147,65,194);
       }
     
-      #person_list .font_color_navygreen::before {
+      #person_list .font_color_navygreen {
         background-color: rgb(143,177,132);
       }
     
-      #person_list .font_color_darkblue::before {
+      #person_list .font_color_darkblue {
         background-color: rgb(0,0,147);
       }
     
-      #person_list .font_color_cyan::before {
+      #person_list .font_color_cyan {
         background-color: rgb(0,150,215);
       }
     
-      #person_list .font_color_ochre::before {
+      #person_list .font_color_ochre {
         background-color: rgb(180,136,58);
       }
     
-      #person_list .font_color_burgundy::before {
+      #person_list .font_color_burgundy {
         background-color: rgb(157,23,21);
       }
     
-      #person_list .font_color_rose::before {
+      #person_list .font_color_rose {
         background-color: rgb(255,166,252);
       }
     
-      #person_list .font_color_darkpurple::before {
+      #person_list .font_color_darkpurple {
         background-color: rgb(122,23,122);
       }
     
-      #person_list .font_color_olive::before {
+      #person_list .font_color_olive {
         background-color: rgb(187,183,125);
       }
     
-      #person_list .font_color_brown::before {
+      #person_list .font_color_brown {
         background-color: rgb(121,69,33);
       }
     
-      #person_list .font_color_turquoise::before {
+      #person_list .font_color_turquoise {
         background-color: rgb(122,201,205);
       }
     
-      #person_list .font_color_orange::before {
+      #person_list .font_color_orange {
         background-color: rgb(232,147,70);
       }
     
-      #person_list .font_color_signalgreen::before {
+      #person_list .font_color_signalgreen {
         background-color: rgb(0,229,0);
       }
     
