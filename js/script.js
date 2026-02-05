@@ -1,12 +1,24 @@
 document.getElementById("toggle-button").addEventListener("click", function () {
     const person_list = document.getElementById("person_list");
-                person_list.classList.toggle("show");
-            });
+    person_list.classList.toggle("show");
+  
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+  
 
-document.getElementById("info-button").addEventListener("click", function () {
-const info_text = document.getElementById("info_text");
-            info_text.classList.toggle("show");
-        });
+  document.getElementById("info-button").addEventListener("click", function () {
+    const info_text = document.getElementById("info_text");
+    info_text.classList.toggle("show");
+  
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+  
 
 // Projekte von Leuten sollen erscheinen
 
@@ -40,3 +52,12 @@ personNames.forEach(name => {
         });
     });
 });
+
+
+// Reset Togglebuttons Farbe nach anklicken
+document.querySelectorAll('.header-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.blur();
+    });
+  });
+  
