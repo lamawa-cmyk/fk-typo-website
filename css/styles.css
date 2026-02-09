@@ -353,14 +353,17 @@ body {
     color: rgb(255,137,84);
   }
 
-  /* Highlighted-Klasse für sofort sichtbare Elemente */
-  .content .highlighted {
-    color: inherit;
-  }
+
+
 
   /* Emojis sind standardmäßig sichtbar (Mobile) */
   .content .emoji {
     opacity: 1;
+    color: initial !important;
+  }
+
+  .content .emoji a{
+    color: initial !important;
   }
 
   /* Abstand nach Projekttitel zum nächsten Bild */
