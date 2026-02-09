@@ -133,6 +133,7 @@ body {
   #person_list {
     position: absolute;
     left: var(--page-padding);
+    z-index: 2000;
     font-size: var(--font-small);
     line-height: var(--line-small);
   
@@ -275,6 +276,12 @@ body {
       Main Content: Projekte (gilt für ALLE Geräte) 
     =============================================== */
 
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    
   /* Neue Struktur: Farben sind Basis  */
  
   .content a{
