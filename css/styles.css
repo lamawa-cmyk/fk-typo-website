@@ -164,6 +164,10 @@ body {
 
 
 /* Box-Farben */
+  #person_list .font_color_mossgreen:hover {
+    background-color: rgb(104,119,93);
+    color: rgb(239,240,241);
+  }
 
   #person_list .font_color_red:hover {
     background-color: rgb(255,8,28);
@@ -290,6 +294,11 @@ body {
   }
 
   /* FARBEN sind IMMER definiert (Mobile + Desktop) */
+ .content .font_color_mossgreen:hover,
+ .content .font_color_mossgreen:hover a{
+  color:rgb(104,119,93);
+ }
+ 
   .content .font_color_royalblue, 
   .content .font_color_royalblue a {
     color: rgb(0,2,249);
@@ -396,6 +405,7 @@ body {
     .content .font_color_signalpink,
     .content .font_color_orange,
     .content .font_color_brown,
+    .content .font_color_mossgreen:hover,
     .content .font_color_signalgreen,
     .content .font_color_babyblue,
     .content .klasse,
@@ -416,6 +426,7 @@ body {
     .content .font_color_brown:hover,
     .content .font_color_signalgreen:hover,
     .content .font_color_babyblue:hover,
+    .content .font_color_mossgreen:hover,
     .content .klasse:hover,
     .content .collab:hover,
     .content .emoji:hover 
