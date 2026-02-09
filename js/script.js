@@ -74,3 +74,12 @@ document.querySelectorAll('.header-pill').forEach(btn => {
     });
   });
   
+
+// Beim Laden der Website: Erst Bilder dann verzögert die Projekttitel
+
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.body.classList.add("show-titles");
+    }, 400); // Zeitpunkt steuerbar
+  });
+  
