@@ -475,7 +475,7 @@ body {
       .project_title {
       opacity: 0;
       transform: translateY(6px);
-      transition: opacity 0.4s ease, transform 0.4s ease;
+      transition: opacity 1s ease, transform 0.4s ease;
     }
 
       body.show-titles .project_title {
