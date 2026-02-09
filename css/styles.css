@@ -469,7 +469,7 @@ body {
         padding-top: 36px;   /* Headerhöhe + Luft */
       }
 
-      
+
   /* Beim Laden der Website: Erst Bilder dann verzögert die Projekttitel */
 
       .project_title {
@@ -481,7 +481,6 @@ body {
       body.show-titles .project_title {
       opacity: 1;
       transform: translateY(0);
-      transition-delay: 0.6s; /* ← Verzögerung nach Bild */
     }
 
   /* Header Mobile */
