@@ -99,3 +99,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+// button schließt die box_black 
+document.querySelectorAll(".close-button").forEach(button => {
+  button.addEventListener("click", () => {
+    button.closest(".box_black").style.display = "none";
+  });
+});
+
+

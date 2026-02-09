@@ -650,5 +650,35 @@ body {
     
     }
 
+    /* schwarze Box */
+.box_black{
+  position: fixed;
+  bottom: 20px;
+  right:20px;
+  z-index: 1000;
 
-   
+  width: 500px;
+  height: 305px;
+  padding: 40px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Text ist in der mitte */
+
+
+
+}
+.close-button{
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
