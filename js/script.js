@@ -77,21 +77,25 @@ document.querySelectorAll('.header-pill').forEach(btn => {
 
 // Beim Laden der Website: Erst Bilder dann verzögert die Projekttitel
 
-if (window.innerWidth <= 768) {
+document.addEventListener("DOMContentLoaded", () => {
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
+  if (window.innerWidth <= 768) {
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
     });
-  }, {
-    threshold: 0.15
-  });
 
-  document.querySelectorAll(".project_title").forEach(el => {
-    observer.observe(el);
-  });
+    document.querySelectorAll(".project_title").forEach(el => {
+      observer.observe(el);
+    });
 
-}
+  }
+
+});
