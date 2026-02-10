@@ -1,48 +1,85 @@
   
 
-// Projekte von Leuten sollen erscheinen
 
 // Namen in person_list
+
+// ===== Personen Hover (Desktop) + Click Filter (Mobile) =====
+
 const personNames = document.querySelectorAll('#person_list p');
 
-personNames.forEach(name => {
-    name.addEventListener('mouseenter', function() {
-        const person_list = document.getElementById('person_list');
-        
-        // ✅ NUR wenn die Liste ausgeklappt ist
-        if (!person_list.classList.contains('show')) {
-            return; // Abbrechen, wenn Liste nicht sichtbar
-        }
+function resetMobileFilter() {
+  document.querySelectorAll('.project_title')
+    .forEach(p => p.classList.remove('mobile-hidden'));
 
-        // ✅ ZUERST alle anderen Highlights entfernen
-      const allProjects = document.querySelectorAll('.content .highlighted');
-        allProjects.forEach(project => {
-          project.classList.remove('highlighted');
-      });
-        
-        // Finde alle Klassen des Namens
-        const classes = Array.from(this.classList);
-        // Filter nach Farb-Klassen (die mit font_color_ anfangen)
-        const colorClass = classes.find(c => c.startsWith('font_color_'));
-        
-        if (colorClass) {
-            // Finde alle Projekte mit der gleichen Klasse
-            const projects = document.querySelectorAll(`.content .${colorClass}`);
-            // Füge temporär eine Klasse hinzu, die sie sichtbar macht
-            projects.forEach(project => {
-                project.classList.add('highlighted');
-            });
+  personNames.forEach(n =>
+    n.classList.remove('active-filter'));
+}
+
+personNames.forEach(name => {
+
+  // ---------- DESKTOP HOVER ----------
+  name.addEventListener('mouseenter', function() {
+    if (isMobile()) return;
+    if (!person_list.classList.contains('show')) return;
+
+    document.querySelectorAll('.highlighted')
+      .forEach(p => p.classList.remove('highlighted'));
+
+    const colorClass = [...this.classList]
+      .find(c => c.startsWith('font_color_'));
+
+    if (!colorClass) return;
+
+    document.querySelectorAll(`.content .${colorClass}`)
+      .forEach(p => p.classList.add('highlighted'));
+  });
+
+  name.addEventListener('mouseleave', function() {
+    if (isMobile()) return;
+
+    document.querySelectorAll('.highlighted')
+      .forEach(p => p.classList.remove('highlighted'));
+  });
+
+
+  // ---------- MOBILE CLICK FILTER ----------
+  name.addEventListener('click', function() {
+
+    if (!isMobile()) return;
+
+    const colorClass = [...this.classList]
+      .find(c => c.startsWith('font_color_'));
+    if (!colorClass) return;
+
+    const already = this.classList.contains('active-filter');
+
+    resetMobileFilter();
+
+    if (already) return;
+
+    this.classList.add('active-filter');
+
+    document.querySelectorAll('.project_title')
+      .forEach(t => {
+        if (!t.classList.contains(colorClass)) {
+          t.classList.add('mobile-hidden');
         }
-    });
-    
-    name.addEventListener('mouseleave', function() {
-        // Entferne die highlight-Klasse von allen Projekten
-        const allProjects = document.querySelectorAll('.content .highlighted');
-        allProjects.forEach(project => {
-            project.classList.remove('highlighted');
-        });
-    });
+      });
+
+    const first = document.querySelector(`.project_title.${colorClass}`);
+    if (first) {
+      const y = first.getBoundingClientRect().top + window.scrollY - 48;
+
+      window.scrollTo({
+        top: y,
+        behavior: "smooth"
+      });      
+    }
+
+  });
+
 });
+
 
 
 
@@ -89,6 +126,7 @@ function isMobile() {
 toggleBtn.addEventListener("click", function () {
 
   if (isMobile()) {
+    resetMobileFilter();   // ← wichtig
     info_text.classList.remove("show");
   }
 

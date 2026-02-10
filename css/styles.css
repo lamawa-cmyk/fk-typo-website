@@ -463,16 +463,11 @@ body {
        --line-small: 24px;
 
        --title-gap: 6px;
-      }
-
-      body {
-        padding-top: 36px;   /* Headerhöhe + Luft */
+       --header-height-mobile: 36px;
       }
 
 
-  /* Beim Laden der Website: Erst Bilder dann verzögert die Projekttitel */
-
-      /* Beim Laden: Titel zunächst unsichtbar */
+   /* Beim Laden der Website: Erst Bilder dann verzögert die Projekttitel */
 
       .project_title {
         opacity: 0;
@@ -482,6 +477,7 @@ body {
       body.titles-ready .project_title {
         opacity: 1;
       }
+
 
   /* Header Mobile */
 
@@ -493,8 +489,10 @@ body {
 
         padding-left: var(--page-padding);
         padding-right: var(--page-padding);
-
+        height: var(--header-height-mobile);
         z-index: 1000;
+
+        pointer-events: auto;
       }
 
       .header-content {
@@ -514,11 +512,15 @@ body {
         max-width: 100%;
       }
 
-    
+      body {
+        padding-top: var(--header-height-mobile);
+      }
+
   /* Personenliste Mobile */
 
       #person_list {
-        position: static;       /* nicht mehr absolut */
+        position: static;
+        margin-top: 0; 
         max-width: 100%;
         margin-left: 0;
         left: 0;
@@ -623,9 +625,14 @@ body {
         background-color: rgb(232,147,70);
       }
 
-      .content {
-        padding-top: 36px
+
+
+  /* Beim Klicken auf Namen bleiben nur die Projekte der Person sichtbar */
+
+      .content .mobile-hidden {
+        visibility: hidden;
       }
+    
     }
     
 
