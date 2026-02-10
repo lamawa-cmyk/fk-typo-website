@@ -1,3 +1,13 @@
+/* ======================================
+    "Grundeinstellungen"
+    ===================================== */
+
+@font-face {
+  font-family: "ABC Monument Grotesk";
+  src: url("../fonts/ABCMonumentGrotesk-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
     /* schwarze Box */
 .box_black{
@@ -33,6 +43,33 @@
   color: white;
   font-size: 25px;
   cursor: pointer;
+}
+
+/* mobile Anpassung */
+
+@media (max-width: 768px) {
+        :root {
+        --font-large: 22px;
+        --line-large: 30px;
+
+       --font-small: 18px;
+       --line-small: 24px;
+
+       --title-gap: 6px;
+      }
+  
+    .box_black{
+        width: calc(100vw -32px);
+        max-width: 300px;
+        height: auto;
+        min-height: 200px;
+        padding: 30px 20px;
+        bottom: px;
+        right: 16px;
+        font-size: var(--font-large);
+        line-height: var(--line-large);
+    }
+
 }
 
 /* ============
