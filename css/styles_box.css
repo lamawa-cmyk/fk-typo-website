@@ -97,3 +97,11 @@
   display: flex;
   align-items: center;
 }
+/* Bilder anpassung */
+.vitrine img {
+    max-height: 25vh;
+    height: auto;
+    max-width: 25vw;
+    width: auto;
+    object-fit: contain; /* Seitenverhältnis beibehalten */
+}
