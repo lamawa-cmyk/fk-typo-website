@@ -1,23 +1,3 @@
-document.getElementById("toggle-button").addEventListener("click", function () {
-    const person_list = document.getElementById("person_list");
-    person_list.classList.toggle("show");
-  
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-  
-
-  document.getElementById("info-button").addEventListener("click", function () {
-    const info_text = document.getElementById("info_text");
-    info_text.classList.toggle("show");
-  
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
   
 
 // Projekte von Leuten sollen erscheinen
@@ -106,11 +86,9 @@ function isMobile() {
   return window.matchMedia("(max-width: 768px)").matches;
 }
 
-
 toggleBtn.addEventListener("click", function () {
 
   if (isMobile()) {
-    // Mobile → gegenseitig ausschalten
     info_text.classList.remove("show");
   }
 
@@ -122,11 +100,9 @@ toggleBtn.addEventListener("click", function () {
   });
 });
 
-
 infoBtn.addEventListener("click", function () {
 
   if (isMobile()) {
-    // Mobile → gegenseitig ausschalten
     person_list.classList.remove("show");
   }
 
@@ -137,6 +113,7 @@ infoBtn.addEventListener("click", function () {
     behavior: "smooth"
   });
 });
+
 
 
 
