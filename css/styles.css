@@ -475,16 +475,12 @@ body {
       /* Beim Laden: Titel zunächst unsichtbar */
 
       .project_title {
-      opacity: 0;
-      transform: translateY(6px);
-      transition: opacity 1s ease, transform 0.45s ease;
+        opacity: 0;
+        transition: opacity 0.5s ease;
       }
-
-      /* Wenn sichtbar → einblenden */
-
-      .project_title.visible {
-      opacity: 1;
-      transform: translateY(0);
+    
+      body.titles-ready .project_title {
+        opacity: 1;
       }
 
   /* Header Mobile */
