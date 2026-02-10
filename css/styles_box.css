@@ -1,0 +1,54 @@
+
+    /* schwarze Box */
+.box_black{
+  position: fixed;
+  bottom: 20px;
+  right:20px;
+  z-index: 1000;
+
+  width: 500px;
+  height: 305px;
+  padding: 40px;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Text ist in der mitte */
+
+}
+
+.box_black a{
+  color: white;
+  text-decoration: none;
+}
+.close-button{
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* ============
+     Vitrine 
+  ============= */
+.vitrine {
+  position: fixed;
+  top: 50%;  /* vertikale Mitte */
+  left: 50%;  /*horizontale Mitte */
+  transform: translate(-50%, -50%);
+  width:75%;
+  height: 80%;
+  padding: 20px;
+  border: 2px solid black;
+  background-color: black;
+
+  display: flex;
+  align-items: center;
+}
