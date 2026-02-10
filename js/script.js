@@ -81,7 +81,7 @@ if (window.innerWidth <= 768) {
   requestAnimationFrame(() => {
     setTimeout(() => {
       document.body.classList.add("titles-ready");
-    }, 250);
+    }, 2000);
   });
 }
 
