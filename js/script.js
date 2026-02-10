@@ -85,10 +85,56 @@ if (window.innerWidth <= 768) {
   });
 }
 
+
 // button schließt die box_black 
+
 document.querySelectorAll(".close-button").forEach(button => {
   button.addEventListener("click", () => {
     button.closest(".box_black").style.display = "none";
+  });
+});
+
+
+// Mobile: Namensliste und Infobox schließen sich gegenseitig
+
+const toggleBtn = document.getElementById("toggle-button");
+const infoBtn = document.getElementById("info-button");
+const person_list = document.getElementById("person_list");
+const info_text = document.getElementById("info_text");
+
+function isMobile() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
+
+
+toggleBtn.addEventListener("click", function () {
+
+  if (isMobile()) {
+    // Mobile → gegenseitig ausschalten
+    info_text.classList.remove("show");
+  }
+
+  person_list.classList.toggle("show");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+
+infoBtn.addEventListener("click", function () {
+
+  if (isMobile()) {
+    // Mobile → gegenseitig ausschalten
+    person_list.classList.remove("show");
+  }
+
+  info_text.classList.toggle("show");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
   });
 });
 
