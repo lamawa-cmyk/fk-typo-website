@@ -98,7 +98,22 @@
   align-items: center;
 }
 /* Bilder anpassung */
-.vitrine img {
+.klein img {
+    max-height: 8vh;
+    height: auto;
+    max-width: 8vw;
+    width: auto;
+    object-fit: contain; /* Seitenverhältnis beibehalten */
+}
+.mittel img{
+    max-height: 14vh;
+    height: auto;
+    max-width: 11vw;
+    width: auto;
+    object-fit: contain; /* Seitenverhältnis beibehalten */
+}
+
+.gross img{
     max-height: 25vh;
     height: auto;
     max-width: 25vw;
