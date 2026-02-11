@@ -311,6 +311,9 @@ img {
   visibility: hidden;
   pointer-events: none; 
   transition: opacity 0.3s;
+
+  padding: 20px;  /* Rand zum schwarzen Vitrine */
+  box-sizing: border-box; /* Damit padding in width/height eingerechnet wird */
 }
 
 .project_discription > div.show {
@@ -324,3 +327,12 @@ img {
   position: absolute; /* unverändert */
   z-index: 10;        /* unter Milchglas */
 }
+
+
+/* textstyling (objekttext)*/
+.project_discription p,h2 {
+    font-size: var(--font-running-text);
+    line-height: var(--line-running-text);
+    color:white;
+}
+
