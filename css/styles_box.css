@@ -198,7 +198,7 @@
 .vitrine_thing:nth-child(11) { top: 81%; left: 13%; } /* plueschdino */
 .vitrine_thing:nth-child(12) { top: 3%; left: 60%; } /* regal */
 .vitrine_thing:nth-child(13) { top: 6%; left: 80%; }  /* salzgabel */
-.vitrine_thing:nth-child(14) { top: 25%; left: 87%; } /* boule_kugeln */
+.vitrine_thing:nth-child(14) { top: 23%; left: 85%; } /* boule_kugeln */
 .vitrine_thing:nth-child(15) { top: 51%; left: 86%; } /* schloss */
 .vitrine_thing:nth-child(16) { top: 17%; left: 63%; } /* schluesselbund */
 .vitrine_thing:nth-child(17) { top: 65%; left: 91%; } /* streichhoelzer */
@@ -291,3 +291,24 @@ img {
   opacity: 1;
   visibility: visible;
 }
+
+
+/* text_discpition */
+.project_discription > div {
+  position: absolute;  /* Position relativ zu .vitrine */
+  inset: 0;            /* oben, rechts, unten, links = 0 */
+  z-index: 100;        /* über allen anderen Elementen */
+  
+  /* Standardmäßig unsichtbar */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; 
+  transition: opacity 0.3s;
+}
+
+.project_discription > div.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
