@@ -1,4 +1,12 @@
   
+const toggleBtn = document.getElementById("toggle-button");
+const infoBtn = document.getElementById("info-button");
+const person_list = document.getElementById("person_list");
+const info_text = document.getElementById("info_text");
+
+function isMobile() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
 
 
 // Namen in person_list
@@ -15,12 +23,15 @@ function resetMobileFilter() {
     n.classList.remove('active-filter'));
 }
 
+// ---------- DESKTOP NAME HOVER ----------
+
 personNames.forEach(name => {
 
-  // ---------- DESKTOP HOVER ----------
   name.addEventListener('mouseenter', function() {
     if (isMobile()) return;
     if (!person_list.classList.contains('show')) return;
+
+    document.body.classList.add('name-hover-mode');
 
     document.querySelectorAll('.highlighted')
       .forEach(p => p.classList.remove('highlighted'));
@@ -34,17 +45,22 @@ personNames.forEach(name => {
       .forEach(p => p.classList.add('highlighted'));
   });
 
-  name.addEventListener('mouseleave', function() {
-    if (isMobile()) return;
+});
 
-    document.querySelectorAll('.highlighted')
-      .forEach(p => p.classList.remove('highlighted'));
-  });
+// Liste verlassen → Modus aus
+person_list.addEventListener('mouseleave', () => {
+  document.body.classList.remove('name-hover-mode');
+
+  document.querySelectorAll('.highlighted')
+    .forEach(p => p.classList.remove('highlighted'));
+});
 
 
-  // ---------- MOBILE CLICK FILTER ----------
+// ---------- MOBILE CLICK FILTER ----------
+
+personNames.forEach(name => {
+
   name.addEventListener('click', function() {
-
     if (!isMobile()) return;
 
     const colorClass = [...this.classList]
@@ -54,7 +70,6 @@ personNames.forEach(name => {
     const already = this.classList.contains('active-filter');
 
     resetMobileFilter();
-
     if (already) return;
 
     this.classList.add('active-filter');
@@ -69,16 +84,12 @@ personNames.forEach(name => {
     const first = document.querySelector(`.project_title.${colorClass}`);
     if (first) {
       const y = first.getBoundingClientRect().top + window.scrollY - 48;
-
-      window.scrollTo({
-        top: y,
-        behavior: "smooth"
-      });      
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
-
   });
 
 });
+
 
 
 
@@ -113,15 +124,6 @@ document.querySelectorAll(".close-button").forEach(button => {
 
 
 // Mobile: Namensliste und Infobox schließen sich gegenseitig
-
-const toggleBtn = document.getElementById("toggle-button");
-const infoBtn = document.getElementById("info-button");
-const person_list = document.getElementById("person_list");
-const info_text = document.getElementById("info_text");
-
-function isMobile() {
-  return window.matchMedia("(max-width: 768px)").matches;
-}
 
 toggleBtn.addEventListener("click", function () {
 
