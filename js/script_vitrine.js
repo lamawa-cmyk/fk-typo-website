@@ -7,14 +7,10 @@ document.querySelectorAll(".vitrine_thing")
     });
   });
 
-document.querySelector(".milk-glass")
-  .addEventListener("click", function() {
-    this.classList.remove("show");
-  });
-
 /* Text erscheint auf vitrine */
 const things = document.querySelectorAll('.vitrine_thing');
 const descriptions = document.querySelectorAll('.project_discription > div');
+const milkGlass = document.querySelector('.milk-glass');
 const vitrine = document.querySelector('.project_discription');
 
 things.forEach(thing => {
@@ -24,7 +20,6 @@ things.forEach(thing => {
     const classes = Array.from(thing.classList);
     const name = classes.find(c => !['vitrine_thing','h_klein','h_mittel','h_gross','w_klein','w_mittel','w_gross','special_size'].includes(c));
     
-    // ⬇️ HIER war der Fehler - Backtick fehlte am Anfang
     const targetDesc = document.querySelector(`.project_discription > div.${name}`);
     
     // Prüfen: ist der Text schon sichtbar?
@@ -40,7 +35,14 @@ things.forEach(thing => {
   });
 });
 
-// Klick auf das Milchglas selbst → alles ausblenden
+// ⬇️ NEU: Ein Klick schließt BEIDES - Milchglas UND Text
+milkGlass.addEventListener('click', () => {
+  milkGlass.classList.remove('show');
+  descriptions.forEach(desc => desc.classList.remove('show'));
+});
+
+// Klick auf project_discription → beides schließen
 vitrine.addEventListener('click', () => {
+  milkGlass.classList.remove('show');
   descriptions.forEach(desc => desc.classList.remove('show'));
 });
