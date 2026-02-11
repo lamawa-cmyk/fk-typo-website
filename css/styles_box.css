@@ -179,32 +179,76 @@
   background-color: black;
 
   z-index: 1300;
-
-  display: flex;
-  align-items: center;
+}
+.vitrine_thing{
+  position: absolute;
 }
 
+/* Jedes Objekt einzeln positionieren */
+.vitrine_thing:nth-child(1) { top: 4%; left: 3%; }   /* kaffeebereiter */
+.vitrine_thing:nth-child(2) { top: 18%; left: 18%; }  /* babykopf */
+.vitrine_thing:nth-child(3) { top: 53%; left: 7%; }   /* briefoeffner */
+.vitrine_thing:nth-child(4) { top: 70%; left: 69%; }  /* feuerzeug */
+.vitrine_thing:nth-child(5) { top: 42%; left: 9%; }  /* frosch */
+.vitrine_thing:nth-child(6) { top: 63%; left: 20%; }  /* haftnotiz */
+.vitrine_thing:nth-child(7) { top: 78%; left: 49%; }  /* kaffeeloeffel */
+.vitrine_thing:nth-child(8) { top: 33%; left: 23%; }  /* nielpferd */
+.vitrine_thing:nth-child(9) { top: 72%; left: 2%; }   /* nokia */
+.vitrine_thing:nth-child(10) { top: 5%; left: 25%; } /* ohrringe */
+.vitrine_thing:nth-child(11) { top: 81%; left: 13%; } /* plueschdino */
+.vitrine_thing:nth-child(12) { top: 3%; left: 60%; } /* regal */
+.vitrine_thing:nth-child(13) { top: 6%; left: 80%; }  /* salzgabel */
+.vitrine_thing:nth-child(14) { top: 25%; left: 87%; } /* boule_kugeln */
+.vitrine_thing:nth-child(15) { top: 51%; left: 86%; } /* schloss */
+.vitrine_thing:nth-child(16) { top: 17%; left: 63%; } /* schluesselbund */
+.vitrine_thing:nth-child(17) { top: 65%; left: 91%; } /* streichhoelzer */
+.vitrine_thing:nth-child(18) { top: 61%; left: 52%; } /* stricknadeln */
+.vitrine_thing:nth-child(19) { top: 27%; left: 43%; } /* tagebuecher */
+.vitrine_thing:nth-child(20) { top: 12%; left: 34%; } /* thorax-buegel */
+.vitrine_thing:nth-child(21) { top: 41%; left: 54%; } /* tragetasche */
+.vitrine_thing:nth-child(22) { top: 70%; left: 75%; } /* wanduhr */
+.vitrine_thing:nth-child(23) { top: 71%; left: 34%; } /* stofftier hund*/
+.vitrine_thing:nth-child(24) { top: 54%; left: 40%; } /*sternkarabiner*/
 
 /* Bilder anpassung */
-.klein img {
-    max-height: 8vh;
-    height: auto;
-    max-width: 8vw;
-    width: auto;
-    object-fit: contain; /* Seitenverhältnis beibehalten */
-}
-.mittel img{
-    max-height: 14vh;
-    height: auto;
-    max-width: 9vw;
-    width: auto;
-    object-fit: contain; /* Seitenverhältnis beibehalten */
+img {
+  object-fit: contain; /*seitenverhältnis beibehalten*/
 }
 
-.gross img{
-    max-height: 25vh;
+/* jedes Bild bekommt einen Wert für height (hoehe) und width (breite) */ 
+.h_klein img {
+    max-height: 8vh;
     height: auto;
-    max-width: 25vw;
+}
+.w_klein img{
+    max-width: 8vw;
     width: auto;
-    object-fit: contain; /* Seitenverhältnis beibehalten */
+}
+
+.h_mittel img{
+    max-height: 12vh;
+    height: auto;
+}
+
+.w_mittel img{
+    max-width: 12vw;
+    width: auto;
+}
+
+.h_gross img{
+    max-height: 18vh;
+    height: auto;
+}
+
+.w_gross img{
+  max-width: 18vw;
+  width: auto;
+}
+
+.special_size img{
+  max-height: 25vh;
+  height: auto;
+  max-width: 18vw;
+  width: auto;
+
 }
