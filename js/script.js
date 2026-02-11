@@ -158,7 +158,7 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     const popup = document.querySelector(".box_black");
     if (popup) popup.classList.add("show");
-  }, 2000);
+  }, 2400);
 });
 
 
