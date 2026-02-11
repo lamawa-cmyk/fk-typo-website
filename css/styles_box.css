@@ -18,10 +18,10 @@
 
   width: 500px;
   height: 305px;
-  padding: 40px;
+  padding: 0px;
   background-color: black;
-  color: white;
-  font-size: 25px;
+  color: rgb(239,240,241);
+  font-size: 24px;
   border: 2px solid black;
   display: flex;
   flex-direction: column;
@@ -34,14 +34,45 @@
   color: white;
   text-decoration: none;
 }
+
+.circle {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.circle-green {
+  background: #9BF24A;
+  top: 0px;
+  left: 0px;
+}
+
+.circle-blue {
+  background: #7FA6C2;
+  bottom: 0px;
+  left: 0px;
+}
+
+.circle-rose {
+  background: #D98AD6;
+  bottom: 0px;
+  right: 0px;
+}
+
 .close-button{
   position: absolute;
-  top: 7px;
-  right: 7px;
+  top: 0px;
+  right: 10px;
+
   background: none;
   border: none;
-  color: white;
-  font-size: 25px;
+
+  color: rgb(239,240,241);
+  font-size: 40px;
+  font-weight: 10;
+
+  line-height: 1;
   cursor: pointer;
 }
 
@@ -72,6 +103,13 @@
 
     .close-button{
         font-size: var(--font-large);
+    }
+
+    .circle {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
     }
 
 }
