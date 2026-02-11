@@ -1,3 +1,6 @@
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('JavaScript lädt!'); 
+
 // Datum Counter
 // Aktuelles Datum in die Überschrift einfügen
 const dateElement = document.getElementById('current-date');
@@ -59,5 +62,5 @@ vitrine.addEventListener('click', () => {
   descriptions.forEach(desc => desc.classList.remove('show'));
 });
 
-
+};
 
