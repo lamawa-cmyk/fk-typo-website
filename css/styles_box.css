@@ -271,35 +271,42 @@ img {
 
 /* Milchglas beim Klick auf Dinge */
 
+/* Milchglas */
 .milk-glass {
-  position: absolute;
-  inset: 0;                 /* = top/right/bottom/left: 0 */
-  
+  position: absolute; /* innerhalb .vitrine */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   background: rgba(255,255,255,0.10);
-  border: none;
-  
+
   opacity: 0;
   visibility: hidden;
+  pointer-events: none; /* Standard: Klick geht durch */
 
   transition: opacity 0.25s ease;
-  z-index: 50;
+  z-index: 50; /* über den Bildern, unter Text */
 }
 
 .milk-glass.show {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto; /* nur wenn sichtbar klickbar */
 }
 
-
-/* text_discpition */
+/* Texte */
 .project_discription > div {
-  position: absolute;  /* Position relativ zu .vitrine */
-  inset: 0;            /* oben, rechts, unten, links = 0 */
-  z-index: 100;        /* über allen anderen Elementen */
+  position: absolute; /* innerhalb .vitrine */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 100; /* über Milchglas */
   
-  /* Standardmäßig unsichtbar */
   opacity: 0;
   visibility: hidden;
   pointer-events: none; 
@@ -312,3 +319,8 @@ img {
   pointer-events: auto;
 }
 
+/* Bilder bleiben unverändert */
+.vitrine_thing {
+  position: absolute; /* unverändert */
+  z-index: 10;        /* unter Milchglas */
+}
