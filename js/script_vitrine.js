@@ -35,7 +35,7 @@ things.forEach(thing => {
     const classes = Array.from(thing.classList);
     const name = classes.find(c => !['vitrine_thing','h_klein','h_mittel','h_gross','w_klein','w_mittel','w_gross','special_size'].includes(c));
     
-    const targetDesc = document.querySelector(`.project_discription > div.${name}`);
+   const targetDesc = document.querySelector(`.project_discription > div.${name}`);
     
     // Prüfen: ist der Text schon sichtbar?
     const isVisible = targetDesc.classList.contains('show');
@@ -62,5 +62,5 @@ vitrine.addEventListener('click', () => {
   descriptions.forEach(desc => desc.classList.remove('show'));
 });
 
-};
+});
 
