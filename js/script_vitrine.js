@@ -1,3 +1,15 @@
+// Datum Counter
+// Aktuelles Datum in die Überschrift einfügen
+const dateElement = document.getElementById('current-date');
+const today = new Date();
+
+// Format: 11.02.2026
+const day = String(today.getDate()).padStart(2, '0');
+const month = String(today.getMonth() + 1).padStart(2, '0'); // +1 weil Monate bei 0 starten
+const year = today.getFullYear();
+
+dateElement.textContent = `${day}.${month}.${year}`;
+
 /* Milchglas Erscheint beim Klick auf Dinge */
 document.querySelectorAll(".vitrine_thing")
   .forEach(el => {
@@ -47,16 +59,5 @@ vitrine.addEventListener('click', () => {
   descriptions.forEach(desc => desc.classList.remove('show'));
 });
 
-// Datum Counter
-// Aktuelles Datum in die Überschrift einfügen
-const dateElement = document.getElementById('current-date');
-const today = new Date();
 
-// Format: 11.02.2026
-const day = String(today.getDate()).padStart(2, '0');
-const month = String(today.getMonth() + 1).padStart(2, '0'); // +1 weil Monate bei 0 starten
-const year = today.getFullYear();
 
-dateElement.textContent = `${day}.${month}.${year}`;
-
-// Rest deines Codes...
