@@ -349,7 +349,8 @@ img {
 
 
 /* textstyling (objekttext)*/
-.project_discription p,h2 {
+.project_discription p,
+.project_discription h2 {
     font-size: var(--font-running-text);
     line-height: var(--line-running-text);
     color:white;
