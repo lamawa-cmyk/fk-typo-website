@@ -12,7 +12,7 @@
     /* schwarze Box */
 .box_black{
   position: fixed;
-  bottom: 74px;
+  bottom: 70px;
   right:36px;
   z-index: 1000;
 
