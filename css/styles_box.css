@@ -97,6 +97,8 @@
   display: flex;
   align-items: center;
 }
+
+
 /* Bilder anpassung */
 .klein img {
     max-height: 8vh;
@@ -108,7 +110,7 @@
 .mittel img{
     max-height: 14vh;
     height: auto;
-    max-width: 11vw;
+    max-width: 9vw;
     width: auto;
     object-fit: contain; /* Seitenverhältnis beibehalten */
 }
