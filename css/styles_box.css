@@ -22,7 +22,7 @@
   background-color: black;
   color: rgb(239,240,241);
   font-size: 26px;
-  border: 2px solid black;
+  border: 1.5px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -175,7 +175,7 @@
   height: calc(100vh - 170px);
   max-height: 1000px;
   padding: 20px;
-  border: 2px solid black;
+  border: none;
   background-color: black;
 
   z-index: 1300;
@@ -253,6 +253,7 @@ img {
 
 }
 
+
 /* Wackeln der Dinge */
 
 @keyframes wiggle {
@@ -265,4 +266,28 @@ img {
 
 .vitrine_thing:hover {
   animation: wiggle 0.4s ease-in-out;
+}
+
+
+/* Milchglas beim Klick auf Dinge */
+
+.milk-glass {
+  position: absolute;
+  inset: 0;                 /* = top/right/bottom/left: 0 */
+  
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255,255,255,0.10);
+  border: none;
+  
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.25s ease;
+  z-index: 50;
+}
+
+.milk-glass.show {
+  opacity: 1;
+  visibility: visible;
 }
