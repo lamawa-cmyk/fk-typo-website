@@ -444,9 +444,28 @@ body {
       transition-delay: 0s !important;
     }
 
+    /* Funktionsweise des Sichtbar-/ Unsichtbar-Seins der Projekttitel:
+       Sobald auf Personlist dann nur die Perojekttitel einer Person sichtbar */
+    
+    /* Name-Filter-Modus aktiv */
+    body.name-hover-mode .project_title {
+      opacity: 0 !important;
+      transition: none !important;
+      transition-delay: 0s !important;
+    }    
+  
+    body.name-hover-mode .project_title.highlighted {
+      opacity: 1 !important;
+    }
 
+      /* Hover im Namensmodus komplett abschalten */
+  body.name-hover-mode .content .project_title:hover {
+    opacity: 0 !important;
+    transition: none !important;
   }
-
+  
+  }
+  
 
   
   /* ============================================
