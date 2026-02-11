@@ -9,6 +9,25 @@
   font-style: normal;
 }
 
+/*:root ist das oberste Element der Seite*/
+:root {
+  --page-padding: 16px;
+  --font-base: "ABC Monument Grotesk", Arial, Helvetica, sans-serif;
+
+  /* Typografisches Raster */
+  --font-small: 24px;
+  --line-small: 28px;
+
+  --font-large: 40px;
+  --line-large: 56px;
+
+  --font-running-text: 20px;
+  --line-running-text: 28px;
+
+  --title-gap: 25px;
+  --baseline-offset: 5px; /* damit Namensliste auf selber Grundlinie anfängt wie Projekttitel */
+}
+
     /* schwarze Box */
 .box_black{
   position: fixed;
