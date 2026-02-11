@@ -92,10 +92,8 @@ personNames.forEach(name => {
 
 
 
+// Mobile: Reset Togglebuttons Farbe nach anklicken
 
-
-
-// Reset Togglebuttons Farbe nach anklicken
 document.querySelectorAll('.header-pill').forEach(btn => {
     btn.addEventListener('click', () => {
       btn.blur();
@@ -103,7 +101,8 @@ document.querySelectorAll('.header-pill').forEach(btn => {
   });
   
 
-// Beim Laden der Website: Erst Bilder dann verzögert die Projekttitel
+
+// Mobile: Beim Laden der Website: Erst Bilder dann verzögert die Projekttitel
 
 if (window.innerWidth <= 768) {
   requestAnimationFrame(() => {
@@ -112,15 +111,6 @@ if (window.innerWidth <= 768) {
     }, 2300);
   });
 }
-
-
-// button schließt die box_black 
-
-document.querySelectorAll(".close-button").forEach(button => {
-  button.addEventListener("click", () => {
-    button.closest(".box_black").style.display = "none";
-  });
-});
 
 
 // Mobile: Namensliste und Infobox schließen sich gegenseitig
@@ -155,12 +145,23 @@ infoBtn.addEventListener("click", function () {
 });
 
 
+
 // Popup nach 2 Sekunden zeigen
+
 window.addEventListener("load", () => {
   setTimeout(() => {
     const popup = document.querySelector(".box_black");
     if (popup) popup.classList.add("show");
   }, 2400);
+});
+
+
+// button schließt die box_black 
+
+document.querySelectorAll(".close-button").forEach(button => {
+  button.addEventListener("click", () => {
+    button.closest(".box_black").style.display = "none";
+  });
 });
 
 

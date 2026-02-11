@@ -444,11 +444,9 @@ body {
       transition-delay: 0s !important;
     }
 
-
-  }
-
-  @media (min-width: 769px) {
-
+    /* Funktionsweise des Sichtbar-/ Unsichtbar-Seins der Projekttitel:
+       Sobald auf Personlist dann nur die Perojekttitel einer Person sichtbar */
+    
     /* Name-Filter-Modus aktiv */
     body.name-hover-mode .project_title {
       opacity: 0 !important;
