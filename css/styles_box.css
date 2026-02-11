@@ -331,8 +331,13 @@ img {
   pointer-events: none; 
   transition: opacity 0.3s;
 
-  padding: 20px;  /* Rand zum schwarzen Vitrine */
+  /* Rand zum schwarzen Vitrine */
+  padding-top: 20px ;
+  padding-bottom:10px ;
+  padding-left: 20px ;
+  padding-right: 30% ;
   box-sizing: border-box; /* Damit padding in width/height eingerechnet wird */
+  overflow-y: auto; /* falls der Text zu lang wird, scrollen */
 }
 
 .project_discription > div.show {
