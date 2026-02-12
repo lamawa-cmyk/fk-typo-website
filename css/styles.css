@@ -544,7 +544,7 @@ body {
         max-width: 100%;
         margin-left: 0;
         left: 0;
-        padding-top: 0;
+        padding-top: 10px;
       }
     
       #person_list.show {
