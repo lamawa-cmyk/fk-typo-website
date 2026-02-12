@@ -407,20 +407,28 @@ h1 a{
   }
 
   .mobil-version {
-    display: flex;
-    justify-content: center;  /* horizontal zentriert */
-    align-items: center;      /* vertikal zentriert */
-    min-height: 100vh;        /* volle Bildschirmhöhe */
+    display: block;  /* Container sichtbar */
+     text-align: center;  /* zentriert inline/inline-block Elemente */
   }
 
   .mobil-version img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto; 
+    display: inline-block;
+    width: 100%;      /* Bild etwas schmaler */
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;  /* horizontal zentriert */
   }
-
-  h1{
+    h1{
     font-size: var(--font-large);
   }
+
+  .back-arrow{
+    position:fixed;
+    font-size: var(--font-large);
+    left: 16px;
 }
+  }
+
+
+
+
