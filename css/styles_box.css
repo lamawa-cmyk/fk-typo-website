@@ -372,3 +372,7 @@ h1 a{
     color: inherit; /* Farbe vom Elternelement wird übernommen */
     text-decoration: none;
 }
+
+.vitrine img {
+  cursor: pointer;
+}
