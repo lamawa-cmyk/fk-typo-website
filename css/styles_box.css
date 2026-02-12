@@ -28,6 +28,10 @@
   --baseline-offset: 5px; /* damit Namensliste auf selber Grundlinie anfängt wie Projekttitel */
 }
 
+.mobil-version {
+  display: none;
+}
+
     /* schwarze Box */
 .box_black{
   position: fixed;
@@ -394,4 +398,26 @@ h1 a{
 
 .back-arrow:hover {
   opacity: 0.5;
+}
+
+/* mobil version */
+@media (max-width: 768px) {
+  .vitrine {
+    display: none;
+  }
+
+  .mobil-version {
+    display: block;  /* <- Das fehlte! */
+  }
+
+  .mobil-version img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto; 
+  }
+
+  h1{
+    font-size: var(--font-large);
+  }
 }
