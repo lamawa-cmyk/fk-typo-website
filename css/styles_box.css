@@ -407,7 +407,10 @@ h1 a{
   }
 
   .mobil-version {
-    display: block;  /* <- Das fehlte! */
+    display: flex;
+    justify-content: center;  /* horizontal zentriert */
+    align-items: center;      /* vertikal zentriert */
+    min-height: 100vh;        /* volle Bildschirmhöhe */
   }
 
   .mobil-version img {
