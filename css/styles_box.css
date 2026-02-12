@@ -28,7 +28,12 @@
   --baseline-offset: 5px; /* damit Namensliste auf selber Grundlinie anfängt wie Projekttitel */
 }
 
+/* auf dem Destop werden die mobil anordnen ausgeschalten */
 .mobil-version {
+  display: none;
+}
+
+.mobil-break {
   display: none;
 }
 
@@ -419,14 +424,30 @@ h1 a{
     margin: 0 auto;  /* horizontal zentriert */
   }
     h1{
+    display: block;          /* überschreibt display: flex */
+    justify-content: unset;  /* entfernt justify-content: center */
     font-size: var(--font-large);
+    line-height: var(--line-small);
+    text-align: left;        /* linksbündig */
+    margin-top: 16px;
   }
 
   .back-arrow{
     position:fixed;
     font-size: var(--font-large);
+    line-height: var(--line-small);
     left: 16px;
 }
+
+  .mobil-break{
+    display: block;
+  }
+
+  .mobil-version p {
+    font-size: 10px;
+    text-align: left;
+    color: rgb(150, 150, 150);
+  }
   }
 
 
