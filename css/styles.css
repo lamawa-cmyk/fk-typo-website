@@ -165,6 +165,11 @@ body {
 
 /* Box-Farben */
 
+  #person_list .font_color_pidgeonblue:hover {
+    background-color: rgb(144,177,178);
+    color: rgb(239,240,241);
+  }
+
   #person_list .font_color_red:hover {
     background-color: rgb(255,8,28);
     color: rgb(239,240,241);
@@ -296,6 +301,11 @@ body {
  .content .font_color_mossgreen:hover,
  .content .font_color_mossgreen:hover a{
   color:rgb(104,119,93);
+ }
+
+ .content .font_color_pidgeonblue:hover,
+ .content .font_color_pidgeonblue:hover a {
+  color:rgb(144,177,178);
  }
  
   .content .font_color_royalblue, 
@@ -429,6 +439,7 @@ body {
     .content .font_color_signalgreen:hover,
     .content .font_color_babyblue:hover,
     .content .font_color_mossgreen:hover,
+    .content .font_color_pidgeonblue:hover,
     .content .klasse:hover,
     .content .collab:hover,
     .content .emoji:hover 
@@ -560,7 +571,11 @@ body {
       #person_list .font_color_red {
         background-color: rgb(255,8,28);
       }
-    
+
+      #person_list .font_color_pidgeonblue {
+        background-color: rgb(144,177,178);
+      }
+
       #person_list .font_color_peach {
         background-color: rgb(255,140,135);
       }
