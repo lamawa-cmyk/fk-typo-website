@@ -44,22 +44,64 @@ h1{
 }
 
 /* Tabellen einstellungen display version */
-table {
-  border-collapse: collapse;
-  width: 90%;
-  margin: 0 auto;            /* Tabelle mittig im Container */
-}
-
-.timetable {
+#timetable-container {
   position: fixed;
   bottom: 0;
-  left: 5%;
-  right: 5%;
+  left: 2%;
+  right: 2%;
   background: white;
   padding-bottom: 12px;
+  display: flex; /* nebeneinander anordnen*/
+  align-items: flex-start;  /* oben ausrichten statt unten */
 }
 
-td, th{
-    border-bottom: 1px solid rgb(150, 150, 150);
-    padding: 3px;
+#timetable-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  max-height: 500px;
+}
+
+#timetable-content.eingeklappt {
+  max-height: 0;
+}
+
+table {
+  font-size: var(--font-running-text);
+  line-height: var(--line-running-text);
+  border-collapse: collapse;
+  width: 90%;
+  margin: 0 auto;
+}
+
+td, th {
+  border-bottom: 1px solid rgb(150, 150, 150);
+  padding: 3px;
+}
+
+.buttom_timetable{
+  border: none;
+  font-size: var(--font-running-text);
+  line-height: var(--line-running-text);
+  background-color: white;
+}
+
+
+#timetable-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;    /* verhindert Zeilenumbruch im Button */
+}
+
+
+/* Animation der Tabelle */
+#timetable-content {
+  flex:1;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  max-height: 500px;
+}
+
+#timetable-content.eingeklappt{
+  max-height: 1;
 }
